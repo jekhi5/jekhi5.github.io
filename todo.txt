@@ -1,0 +1,6 @@
+What pages I want on the website:
+
+	- Projects page
+	- About me
+	- Contact page (with resume)
+	- Make all external links open in a new tab

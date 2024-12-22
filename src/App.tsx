@@ -3,6 +3,7 @@ import './App.css';
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import Home from 'Home';
 import Header from 'components/Header';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
@@ -10,8 +11,8 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="*" element={<Home />} />
         </Routes>
       </BrowserRouter>
     </div>

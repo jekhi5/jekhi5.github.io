@@ -4,6 +4,7 @@ import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import Home from 'Home';
 import Header from 'components/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function App() {
   return (

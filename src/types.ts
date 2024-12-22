@@ -1,4 +1,5 @@
 export interface Project {
+  id: number;
   name: string;
   authors: string[];
   description: string;
@@ -6,5 +7,8 @@ export interface Project {
   imageAltText: string;
   url?: string;
   githubUrl?: string;
+  frontEndUrl?: string;
+  backEndUrl?: string;
+  devpostUrl?: string;
   tags: string[];
 }

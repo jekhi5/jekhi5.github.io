@@ -1,7 +1,6 @@
 import { Project } from '../../types';
 import Tag from './Tag';
 import { FaGithub, FaGlobe } from 'react-icons/fa';
-import {} from 'react-icons/fi';
 
 const ProjectCard = ({ project }: { project: Project }) => {
   return (
@@ -12,14 +11,14 @@ const ProjectCard = ({ project }: { project: Project }) => {
       {project.url ? (
         <a href={project.url ?? ''} target="_blank" rel="noreferrer">
           <img
-            src={require(`../../images/${project.image}`)}
+            src={require(`../../data/${project.image}`)}
             alt={project.imageAltText}
             className="card-img-top"
           />
         </a>
       ) : (
         <img
-          src={require(`../../images/${project.image}`)}
+          src={require(`../../data/${project.image}`)}
           alt={project.imageAltText}
           className="card-img-top"
         />

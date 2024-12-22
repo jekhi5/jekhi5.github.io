@@ -27,6 +27,15 @@ const Header = () => {
           }
         >
           Projects
+        </NavLink>{' '}
+        <NavLink
+          to="/resume"
+          id="resume-button"
+          className={({ isActive }) =>
+            `menu_button ${isActive ? 'menu_selected' : ''}`
+          }
+        >
+          Resume
         </NavLink>
       </div>
     </div>

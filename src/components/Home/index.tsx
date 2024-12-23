@@ -49,7 +49,7 @@ export default function Home() {
             Resume
           </a>
           <a
-            href="/projects"
+            href="/portfolio/projects"
             className="btn btn-outline-dark d-flex align-items-center gap-1"
           >
             <FaHammer />

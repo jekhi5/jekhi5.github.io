@@ -1,12 +1,12 @@
 import { Project } from '../../types';
-import { FaGithub, FaGlobe } from 'react-icons/fa';
 import './index.css';
+import DynamicButtonGroup from './DynamicButtonGroup';
 
 const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <div
       id="project-card"
-      className="card border border-dark rounded shadow-sm hover-shadow h-100"
+      className="card border border-dark rounded shadow-sm hover-shadow"
     >
       {project.url ? (
         <a href={project.url} target="_blank" rel="noreferrer">
@@ -37,73 +37,13 @@ const ProjectCard = ({ project }: { project: Project }) => {
           project.url ||
           project.backEndUrl ||
           project.frontEndUrl ||
-          project.devpostUrl) && (
-          <div className="d-flex flex-column flex-md-row justify-content-center gap-2 mb-3">
-            {project.url && (
-              <a
-                href={project.url}
-                target="_blank"
-                rel="noreferrer"
-                className="btn btn-outline-dark d-flex align-items-center justify-content-center w-100 w-md-auto"
-              >
-                <FaGlobe className="me-1" />
-                Live Site
-              </a>
-            )}
-            {project.githubUrl && (
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="btn btn-outline-dark d-flex align-items-center justify-content-center w-100 w-md-auto"
-              >
-                <FaGithub className="me-1" />
-                GitHub Repository
-              </a>
-            )}
-            {project.devpostUrl && (
-              <a
-                href={project.devpostUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="btn btn-outline-dark d-flex align-items-center justify-content-center w-100 w-md-auto"
-              >
-                <FaGlobe className="me-1" />
-                Devpost Listing
-              </a>
-            )}
-
-            {project.frontEndUrl && (
-              <a
-                href={project.frontEndUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="btn btn-outline-dark w-50 d-flex align-items-center justify-content-center"
-              >
-                <FaGithub className="me-1" />
-                Front-end Repository
-              </a>
-            )}
-
-            {project.backEndUrl && (
-              <a
-                href={project.backEndUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="btn btn-outline-dark w-50 d-flex align-items-center justify-content-center"
-              >
-                <FaGithub className="me-1" />
-                Back-end Repository
-              </a>
-            )}
-          </div>
-        )}
+          project.devpostUrl) && <DynamicButtonGroup project={project} />}
 
         <p className="text-muted fst-italic mb-3 text-center">
           Authors: {project.authors.join(', ')}
         </p>
 
-        <div className="d-flex flex-wrap justify-content-center gap-2">
+        <div className="tags d-flex flex-wrap justify-content-center">
           {project.tags.map((tagName) => (
             <span className="badge bg-secondary">{tagName}</span>
           ))}

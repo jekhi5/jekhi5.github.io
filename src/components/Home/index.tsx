@@ -1,5 +1,6 @@
 import { FaFilePdf, FaGithub, FaLinkedin, FaHammer } from 'react-icons/fa';
 import './index.css';
+import { NavLink } from 'react-router-dom';
 
 export default function Home() {
   return (
@@ -48,13 +49,13 @@ export default function Home() {
             <FaFilePdf />
             Resume
           </a>
-          <a
-            href="/portfolio/projects"
+          <NavLink
+            to="/portfolio/projects"
             className="btn btn-outline-dark d-flex align-items-center gap-1"
           >
             <FaHammer />
             Projects
-          </a>
+          </NavLink>
         </div>
       </div>
     </div>

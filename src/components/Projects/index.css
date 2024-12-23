@@ -10,3 +10,13 @@ html {
   flex-direction: column;
   padding-bottom: 20px;
 }
+
+.row.g-4 {
+  margin: 0;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}

@@ -6,7 +6,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <div
       id="project-card"
-      className="card border border-dark rounded shadow-sm hover-shadow"
+      className="card border border-dark rounded shadow-sm hover-shadow position-relative"
     >
       {project.url ? (
         <a href={project.url} target="_blank" rel="noreferrer">
@@ -27,7 +27,11 @@ const ProjectCard = ({ project }: { project: Project }) => {
       <div className="card-body d-flex flex-column">
         <h5 className="fs-4 fw-bold mb-3 text-center">{project.name}</h5>
 
-        <p className="card-text text-secondary fs-6 mb-4 text-center">
+        <p className="card-text text-secondary fs-6 mb-4 text-center truncated-description">
+          {project.description}
+        </p>
+
+        <p className="card-text text-secondary fs-6 mb-4 text-center full-description">
           {project.description}
         </p>
 

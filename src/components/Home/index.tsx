@@ -1,4 +1,4 @@
-import { FaFilePdf, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaFilePdf, FaGithub, FaLinkedin, FaHammer } from 'react-icons/fa';
 import './index.css';
 
 export default function Home() {
@@ -47,6 +47,13 @@ export default function Home() {
           >
             <FaFilePdf />
             Resume
+          </a>
+          <a
+            href="/projects"
+            className="btn btn-outline-dark d-flex align-items-center gap-1"
+          >
+            <FaHammer />
+            Projects
           </a>
         </div>
       </div>

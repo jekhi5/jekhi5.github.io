@@ -45,6 +45,17 @@ const Header = () => {
                 Projects
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink
+                to="/portfolio/work"
+                id="projects-button"
+                className={({ isActive }) =>
+                  `nav-link ${isActive ? 'active fw-bold text-primary' : ''}`
+                }
+              >
+                Work History
+              </NavLink>
+            </li>
           </ul>
         </div>
       </div>

@@ -41,7 +41,8 @@ const ProjectCard = ({ project }: { project: Project }) => {
           project.url ||
           project.backEndUrl ||
           project.frontEndUrl ||
-          project.devpostUrl) && <DynamicButtonGroup project={project} />}
+          project.devpostUrl ||
+          project.caseStudyUrl) && <DynamicButtonGroup project={project} />}
 
         <p className="text-muted fst-italic mb-3 text-center">
           Authors: {project.authors.join(', ')}

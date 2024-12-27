@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { FaGithub, FaGlobe } from 'react-icons/fa';
+import { FaFilePdf, FaGithub, FaGlobe } from 'react-icons/fa';
 import { Project } from 'types';
 
 const DynamicButtonGroup = ({ project }: { project: Project }) => {
@@ -81,18 +81,6 @@ const DynamicButtonGroup = ({ project }: { project: Project }) => {
           GitHub Repository
         </a>
       )}
-      {project.devpostUrl && (
-        <a
-          href={project.devpostUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="btn btn-outline-dark d-flex align-items-center justify-content-center"
-        >
-          <FaGlobe className="me-1" />
-          Devpost Listing
-        </a>
-      )}
-
       {project.frontEndUrl && (
         <a
           href={project.frontEndUrl}
@@ -114,6 +102,28 @@ const DynamicButtonGroup = ({ project }: { project: Project }) => {
         >
           <FaGithub className="me-1" />
           Back-end Repository
+        </a>
+      )}
+      {project.caseStudyUrl && (
+        <a
+          href={project.caseStudyUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="btn btn-outline-dark d-flex align-items-center justify-content-center"
+        >
+          <FaFilePdf className="me-1" />
+          Case Study
+        </a>
+      )}
+      {project.devpostUrl && (
+        <a
+          href={project.devpostUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="btn btn-outline-dark d-flex align-items-center justify-content-center"
+        >
+          <FaGlobe className="me-1" />
+          Devpost Listing
         </a>
       )}
     </div>

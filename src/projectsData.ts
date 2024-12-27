@@ -12,6 +12,8 @@ const projects: Project[] = [
     tags: ['React', 'TypeScript', 'MongoDB', 'Firebase', 'Express', 'Node'],
     url: 'https://askNorthStar.onRender.com',
     githubUrl: 'https://github.com/jekhi5/NorthStar',
+    caseStudyUrl:
+      'https://docs.google.com/document/d/1DEHWC5ttwJw-DoJJbQdMyonwALabD3zeaDjGg0DcumM/edit?usp=sharing',
   },
   {
     id: 2,

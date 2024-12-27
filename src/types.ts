@@ -10,5 +10,6 @@ export interface Project {
   frontEndUrl?: string;
   backEndUrl?: string;
   devpostUrl?: string;
+  caseStudyUrl?: string;
   tags: string[];
 }

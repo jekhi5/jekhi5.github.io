@@ -14,7 +14,7 @@ export default function Home() {
           className="img-fluid rounded-circle mb-3 shadow"
         />
 
-        <div className="mb-4 fs-5 text-secondary">
+        <div className="mb-4 fs-5 text-black">
           Hey! My name is Jacob. I'm a computer scientist fascinated by
           language, emergency medicine, and Reproductive Justice. When I'm not
           programming you can probably find me working on an ambulance or

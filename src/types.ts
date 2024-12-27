@@ -21,7 +21,6 @@ export interface Work {
   duration: string;
   bullets: string[];
   companyUrl: string;
-  image: string; // name of image in data folder
-  imageAltText: string;
+  logo?: string; // name of logo in data folder
   technologies: string[];
 }

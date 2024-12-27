@@ -13,8 +13,6 @@ const workData: Work[] = [
       'Finalized implementation of new user product within all deadlines enabling company to bring in 4 new partnerships',
     ],
     companyUrl: 'https://www.woodmac.com/lens/hydrogen/',
-    image: './data/WoodMac.jpeg',
-    imageAltText: 'Wood Mackenzie logo',
     technologies: ['TypeScript', 'ElasticSearch', 'GraphQL'],
   },
 
@@ -29,8 +27,7 @@ const workData: Work[] = [
       'Created 3 user roles for effective site moderation which enabled the hiring of new full-time moderation staff',
     ],
     companyUrl: 'https://generatenu.com',
-    image: './data/Generate.jpeg',
-    imageAltText: 'Generate logo',
+    logo: 'Generate.svg',
     technologies: ['Go', 'React'],
   },
 ];

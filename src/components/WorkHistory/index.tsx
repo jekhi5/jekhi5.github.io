@@ -1,5 +1,7 @@
 import { workData } from '../../workData';
 import WorkCard from './WorkCard';
+import './index.css';
+
 export default function WorkHistory() {
   return (
     <div className="work-history">

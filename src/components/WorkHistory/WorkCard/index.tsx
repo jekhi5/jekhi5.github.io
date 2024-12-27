@@ -5,9 +5,34 @@ const WorkCard = ({ data }: { data: Work }) => {
   return (
     <div className="work-item">
       <div className="work-item-header">
-        <h3 className="company">{data.company}</h3>
-        <p className="role">{data.role}</p>
-        <p className="duration">{data.duration}</p>
+        {data.logo && (
+          <a
+            href={data.companyUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="company-link"
+          >
+            <div className="logo-container">
+              <img
+                src={require(`../../../data/${data.logo}`)}
+                alt={`${data.company} logo`}
+                className="company-logo"
+              />
+            </div>
+          </a>
+        )}
+        <div className="company-details">
+          <a
+            href={data.companyUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="company-link"
+          >
+            <h3 className="company">{data.company}</h3>
+          </a>
+          <p className="role">{data.role}</p>
+          <p className="duration">{data.duration}</p>
+        </div>
       </div>
       <div className="work-item-body">
         <ul>

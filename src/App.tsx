@@ -5,6 +5,7 @@ import Home from 'components/Home';
 import Header from 'components/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import WorkHistory from 'components/WorkHistory';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="" element={<Home />} />
         <Route path="/portfolio/projects" element={<Projects />} />
+        <Route path="/portfolio/work" element={<WorkHistory />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </div>

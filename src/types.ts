@@ -13,3 +13,16 @@ export interface Project {
   caseStudyUrl?: string;
   tags: string[];
 }
+
+export interface Work {
+  id: number;
+  company: string;
+  role: string;
+  startDate: Date;
+  endDate?: Date;
+  bullets: string[];
+  companyUrl: string;
+  logo?: string; // name of logo in data folder
+  tags: string[];
+  type: 'technical' | 'additional';
+}

@@ -1,4 +1,4 @@
-import ProjectCard from 'components/ProjectCard';
+import ProjectCard from './ProjectCard';
 import { projects } from '../../projectsData';
 import './index.css';
 

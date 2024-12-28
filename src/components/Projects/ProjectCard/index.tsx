@@ -1,4 +1,4 @@
-import { Project } from '../../types';
+import { Project } from '../../../types';
 import './index.css';
 import DynamicButtonGroup from './DynamicButtonGroup';
 
@@ -11,14 +11,14 @@ const ProjectCard = ({ project }: { project: Project }) => {
       {project.url ? (
         <a href={project.url} target="_blank" rel="noreferrer">
           <img
-            src={require(`../../data/${project.image}`)}
+            src={require(`../../../data/${project.image}`)}
             alt={project.imageAltText}
             className="card-img-top img-fluid rounded shadow"
           />
         </a>
       ) : (
         <img
-          src={require(`../../data/${project.image}`)}
+          src={require(`../../../data/${project.image}`)}
           alt={project.imageAltText}
           className="card-img-top img-fluid rounded shadow"
         />

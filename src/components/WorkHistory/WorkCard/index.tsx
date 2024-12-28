@@ -31,7 +31,9 @@ const WorkCard = ({ data }: { data: Work }) => {
             <h3 className="company">{data.company}</h3>
           </a>
           <p className="role">{data.role}</p>
-          <p className="duration">{data.duration}</p>
+          <p className="duration">
+            {data.startDate} - {data.endDate ?? 'Present'}
+          </p>
         </div>
       </div>
       <div className="work-item-body">
@@ -44,7 +46,7 @@ const WorkCard = ({ data }: { data: Work }) => {
         </ul>
 
         <ul className="technologies">
-          {data.technologies.map((tech, index) => (
+          {data.tags.map((tech, index) => (
             <li key={index} className="technology">
               {tech}
             </li>

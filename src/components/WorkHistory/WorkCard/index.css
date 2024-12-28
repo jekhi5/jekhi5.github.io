@@ -1,3 +1,9 @@
+.work-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .work-item {
   display: flex;
   flex-direction: column;

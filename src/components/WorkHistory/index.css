@@ -18,3 +18,42 @@
   flex-direction: column;
   gap: 30px;
 }
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.filter-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #6c757d;
+  background-color: #f8f9fa;
+  border: 2px solid #dee2e6;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-button:hover {
+  color: #ffffff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.filter-button.active {
+  color: #ffffff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.filter-button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}

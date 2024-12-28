@@ -18,9 +18,11 @@ export interface Work {
   id: number;
   company: string;
   role: string;
-  duration: string;
+  startDate: string;
+  endDate?: string;
   bullets: string[];
   companyUrl: string;
   logo?: string; // name of logo in data folder
-  technologies: string[];
+  tags: string[];
+  type: 'technical' | 'additional';
 }

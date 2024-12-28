@@ -104,7 +104,8 @@ const workData: Work[] = [
       'Assisted in pediatric trauma stabilization and responded to "Code Blue" emergencies, monitored and reported patient vitals',
       'Supported child life specialist team in patient comfort measures during procedures',
     ],
-    companyUrl: 'https://northeasternshare.wixsite.com/share',
+    companyUrl:
+      'https://www.childrenshospital.org/departments/emergency-medicine',
     logo: 'BCH.svg',
     tags: [
       'Public Speaking',

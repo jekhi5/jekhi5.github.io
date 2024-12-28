@@ -7,15 +7,6 @@ import { FaBriefcase, FaLaptopCode } from 'react-icons/fa';
 export default function WorkHistory() {
   const [filter, setFilter] = useState('technical');
 
-  const filteredData = workData
-    .filter((item) => item.type === filter)
-    .sort((a, b) => {
-      return b.endDate
-        ? new Date(b.endDate).getTime() -
-            new Date(a.endDate as unknown as string).getTime()
-        : new Date(b.startDate).getTime() - new Date(a.startDate).getTime();
-    });
-
   return (
     <div className="work-history">
       <h2>Work Experience</h2>
@@ -36,9 +27,11 @@ export default function WorkHistory() {
         </button>
       </div>
       <div className="work-items">
-        {filteredData.map((item) => (
-          <WorkCard key={item.company} data={item} />
-        ))}
+        {workData
+          .filter((work) => work.type === filter)
+          .map((item) => (
+            <WorkCard key={item.company} data={item} />
+          ))}
       </div>
     </div>
   );

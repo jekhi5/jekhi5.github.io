@@ -2,6 +2,8 @@ import './index.css';
 import { Work } from '../../../types';
 
 const WorkCard = ({ data }: { data: Work }) => {
+  const formatDate = (date: Date) => `${date.getMonth()}/${date.getFullYear()}`;
+
   return (
     <div className="work-item">
       <div className="work-item-header">
@@ -32,7 +34,8 @@ const WorkCard = ({ data }: { data: Work }) => {
           </a>
           <p className="role">{data.role}</p>
           <p className="duration">
-            {data.startDate} - {data.endDate ?? 'Present'}
+            {formatDate(data.startDate)} -{' '}
+            {data.endDate ? formatDate(data.endDate) : 'Present'}
           </p>
         </div>
       </div>

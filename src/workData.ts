@@ -56,27 +56,6 @@ const workData: Work[] = [
 
   {
     id: 4,
-    company: 'Clinical Assistant',
-    role: "Boston Children's Hospital, Emergency Department",
-    startDate: new Date('07/01/2024'),
-    endDate: new Date('09/01/2024'),
-    bullets: [
-      'Assisted in pediatric trauma stabilization and responded to "Code Blue" emergencies, monitored and reported patient vitals',
-      'Supported child life specialist team in patient comfort measures during procedures',
-    ],
-    companyUrl:
-      'https://www.childrenshospital.org/departments/emergency-medicine',
-    logo: 'BCH.svg',
-    tags: [
-      'Public speaking',
-      'Administration interfacing',
-      'Program development',
-    ],
-    type: 'additional',
-  },
-
-  {
-    id: 5,
     company: 'Cataldo Ambulance Service',
     role: 'Emergency Medical Technician',
     startDate: new Date('06/01/2023'),
@@ -98,7 +77,7 @@ const workData: Work[] = [
   },
 
   {
-    id: 6,
+    id: 5,
     company: 'Vice President',
     role: 'Northeastern University Sexual Health Advocacy, Resources, and Education',
     startDate: new Date('09/01/2021'),
@@ -108,6 +87,27 @@ const workData: Work[] = [
     ],
     companyUrl: 'https://northeasternshare.wixsite.com/share',
     logo: 'SHARE.avif',
+    tags: [
+      'Public speaking',
+      'Administration interfacing',
+      'Program development',
+    ],
+    type: 'additional',
+  },
+
+  {
+    id: 6,
+    company: 'Clinical Assistant',
+    role: "Boston Children's Hospital, Emergency Department",
+    startDate: new Date('07/01/2024'),
+    endDate: new Date('09/01/2024'),
+    bullets: [
+      'Assisted in pediatric trauma stabilization and responded to "Code Blue" emergencies, monitored and reported patient vitals',
+      'Supported child life specialist team in patient comfort measures during procedures',
+    ],
+    companyUrl:
+      'https://www.childrenshospital.org/departments/emergency-medicine',
+    logo: 'BCH.svg',
     tags: [
       'Public speaking',
       'Administration interfacing',

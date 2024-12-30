@@ -1,6 +1,6 @@
-import { FaFilePdf, FaGithub, FaLinkedin, FaHammer } from 'react-icons/fa';
+import { FaFilePdf, FaGithub, FaLinkedin } from 'react-icons/fa';
+import Jacob_Kline from '../../data/Jacob_Kline.pdf';
 import './index.css';
-import { NavLink } from 'react-router-dom';
 
 export default function Home() {
   return (
@@ -41,7 +41,7 @@ export default function Home() {
             GitHub
           </a>
           <a
-            href="https://github.com/jekhi5/MyInformation/blob/main/Jacob%20Kline.pdf"
+            href={Jacob_Kline}
             target="_blank"
             rel="noreferrer"
             className="btn btn-outline-dark d-flex align-items-center gap-1"
@@ -49,13 +49,6 @@ export default function Home() {
             <FaFilePdf />
             Resume
           </a>
-          <NavLink
-            to="/portfolio/projects"
-            className="btn btn-outline-dark d-flex align-items-center gap-1"
-          >
-            <FaHammer />
-            Projects
-          </NavLink>
         </div>
       </div>
     </div>

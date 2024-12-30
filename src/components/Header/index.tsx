@@ -3,7 +3,7 @@ import './index.css';
 
 const Header = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
       <div className="container">
         <NavLink to="/portfolio/home" className="navbar-brand fs-4 fw-bold">
           Jacob Kline

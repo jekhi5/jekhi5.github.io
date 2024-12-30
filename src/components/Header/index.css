@@ -6,3 +6,10 @@
   color: #0056b3;
   transform: scale(1.1);
 }
+
+.navbar {
+  position: fixed !important;
+  z-index: 100 !important;
+  top: 0;
+  width: 100%;
+}

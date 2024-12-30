@@ -13,6 +13,7 @@ const workData: Work[] = [
       'Collaborated with global software teams during implementation which ensured zero downtime for existing products throughout deliverable timeline',
       'Finalized implementation of new user product within all deadlines enabling company to bring in 4 new partnerships',
     ],
+    logo: 'WoodMac.png',
     companyUrl: 'https://www.woodmac.com/lens/hydrogen/',
     tags: ['TypeScript', 'ElasticSearch', 'GraphQL', 'Jira'],
     type: 'technical',

@@ -83,8 +83,9 @@ const workData: Work[] = [
     role: 'Northeastern University Sexual Health Advocacy, Resources, and Education',
     startDate: new Date('09/01/2021'),
     bullets: [
-      'Lead 8+ comprehensive bystander intervention and sexual violence prevention presentations per semester, reaching 350+ freshman',
-      'Present 4+ specialized sexual violence prevention programs to Fraternity and Sorority Life organizations per semester, each for 75+ members',
+      'Lead weekly meetings for 30+ students on interpersonal communication, boundary setting, and healthy relationship development',
+      'Advocate for accessible sexual health resources, securing an 88% markdown on essential products',
+      'Partnered with university administrators and 2 student groups to bring 2 new medical procedures to university health center',
     ],
     companyUrl: 'https://northeasternshare.wixsite.com/share',
     logo: 'SHARE.avif',

@@ -22,6 +22,7 @@ const projects: Project[] = [
     description: 'A simulation of the teaching and learning software, Canvas',
     image: 'KanbasImage.png',
     imageAltText: 'List of courses on the Kanbas Courses page',
+    url: 'https://kanbas-project.netlify.app/#/Kanbas',
     tags: ['React', 'TypeScript', 'MongoDB', 'Express', 'Node'],
     frontEndUrl: 'https://github.com/jekhi5/Kanbas',
     backEndUrl: 'https://github.com/jekhi5/Kanbas-backend',

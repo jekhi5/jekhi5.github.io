@@ -1,5 +1,4 @@
 import { FaFilePdf, FaGithub, FaLinkedin } from 'react-icons/fa';
-import Jacob_Kline from '../../data/Jacob_Kline.pdf';
 import './index.css';
 
 export default function Home() {
@@ -41,7 +40,7 @@ export default function Home() {
             GitHub
           </a>
           <a
-            href={Jacob_Kline}
+            href="/Jacob_Kline.pdf"
             target="_blank"
             rel="noreferrer"
             className="btn btn-outline-dark d-flex align-items-center gap-1"

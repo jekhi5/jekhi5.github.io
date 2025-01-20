@@ -1,6 +1,7 @@
 import { FaFilePdf, FaGithub, FaLinkedin } from 'react-icons/fa';
 import Jacob_Kline from '../../data/Jacob_Kline.pdf';
 import './index.css';
+import Jacob_Kline from '../../data/Jacob_Kline.pdf';
 
 export default function Home() {
   return (

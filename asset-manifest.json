@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/static/css/main.97b05f45.css",
-    "main.js": "/static/js/main.d1643656.js",
+    "main.js": "/static/js/main.de0df9d6.js",
     "static/media/NorthStarImage.png": "/static/media/NorthStarImage.9ae15536f0368fa6977f.png",
     "static/media/SNAPpyImage.png": "/static/media/SNAPpyImage.4e448b1f11fe3597f939.png",
     "static/media/Cataldo.png": "/static/media/Cataldo.da669874b3aa17332a01.png",
     "static/media/KanbasImage.png": "/static/media/KanbasImage.da3cd3839103ee85ddfc.png",
     "static/media/profile.jpg": "/static/media/profile.e19a26262d844d74ebab.jpg",
     "static/media/Northeastern.png": "/static/media/Northeastern.fb23fcdf5a6dd023bbec.png",
-    "static/media/Jacob_Kline.pdf": "/static/media/Jacob_Kline.da8014e7537aa333e0fe.pdf",
+    "static/media/Jacob_Kline.pdf": "/static/media/Jacob_Kline.20ef9ab87e35504e4dad.pdf",
     "static/media/BPL.png": "/static/media/BPL.bce0196257bb71c4d939.png",
     "static/media/BCH.svg": "/static/media/BCH.b453c33cb2ef37972e81.svg",
     "static/media/SHARE.avif": "/static/media/SHARE.fd00774bccd4e3f47b67.avif",
     "static/media/Generate.svg": "/static/media/Generate.ed9bec6fe626c3e47f98.svg",
     "index.html": "/index.html",
     "main.97b05f45.css.map": "/static/css/main.97b05f45.css.map",
-    "main.d1643656.js.map": "/static/js/main.d1643656.js.map"
+    "main.de0df9d6.js.map": "/static/js/main.de0df9d6.js.map"
   },
   "entrypoints": [
     "static/css/main.97b05f45.css",
-    "static/js/main.d1643656.js"
+    "static/js/main.de0df9d6.js"
   ]
 }

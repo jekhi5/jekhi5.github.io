@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
       <div className="container">
-        <NavLink to="/portfolio/home" className="navbar-brand fs-4 fw-bold">
+        <NavLink to="/home" className="navbar-brand fs-4 fw-bold">
           Jacob Kline
         </NavLink>
 
@@ -25,7 +25,7 @@ const Header = () => {
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               <NavLink
-                to="/portfolio/home"
+                to="/home"
                 id="home-button"
                 className={({ isActive }) =>
                   `nav-link ${isActive ? 'active fw-bold text-primary' : ''}`
@@ -36,7 +36,7 @@ const Header = () => {
             </li>
             <li className="nav-item">
               <NavLink
-                to="/portfolio/projects"
+                to="/projects"
                 id="projects-button"
                 className={({ isActive }) =>
                   `nav-link ${isActive ? 'active fw-bold text-primary' : ''}`
@@ -47,7 +47,7 @@ const Header = () => {
             </li>
             <li className="nav-item">
               <NavLink
-                to="/portfolio/work"
+                to="/work"
                 id="projects-button"
                 className={({ isActive }) =>
                   `nav-link ${isActive ? 'active fw-bold text-primary' : ''}`

@@ -34,18 +34,6 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    name: 'Kanbas',
-    authors: ['Henry Renninger', 'Lizzie Jones', 'Jacob Kline'],
-    description: 'A simulation of the teaching and learning software, Canvas',
-    image: 'KanbasImage.png',
-    imageAltText: 'List of courses on the Kanbas Courses page',
-    url: 'https://kanbas-project.netlify.app/#/Kanbas',
-    tags: ['React', 'TypeScript', 'MongoDB', 'Express', 'Node'],
-    frontEndUrl: 'https://github.com/jekhi5/Kanbas',
-    backEndUrl: 'https://github.com/jekhi5/Kanbas-backend',
-  },
-  {
-    id: 4,
     name: 'SNAPpy',
     authors: [
       'Andrew Caplan',
@@ -60,6 +48,18 @@ const projects: Project[] = [
     tags: ['Django', 'Google-Maps', 'Python', 'JavaScript', 'JQuery'],
     devpostUrl: 'https://devpost.com/software/snappy-rb81ku',
     githubUrl: 'https://github.com/jekhi5/SNAPpy',
+  },
+  {
+    id: 4,
+    name: 'Kanbas',
+    authors: ['Henry Renninger', 'Lizzie Jones', 'Jacob Kline'],
+    description: 'A simulation of the teaching and learning software, Canvas',
+    image: 'KanbasImage.png',
+    imageAltText: 'List of courses on the Kanbas Courses page',
+    url: 'https://kanbas-project.netlify.app/#/Kanbas',
+    tags: ['React', 'TypeScript', 'MongoDB', 'Express', 'Node'],
+    frontEndUrl: 'https://github.com/jekhi5/Kanbas',
+    backEndUrl: 'https://github.com/jekhi5/Kanbas-backend',
   },
 ];
 

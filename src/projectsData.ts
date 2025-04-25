@@ -17,6 +17,23 @@ const projects: Project[] = [
   },
   {
     id: 2,
+    name: 'ViPER Program Language and Compiler',
+    authors: ['Emery Jacobowitz', 'Jacob Kline'],
+    description:
+      'A robust functional language with a built in testing framework for snake enthusiasts',
+    image: 'ViPER.png',
+    imageAltText: 'ViPER text with the text "Verifying Programs Execute Right',
+    githubUrl:
+      'https://github.com/jekhi5/ViPER-compiler?tab=readme-ov-file#the-viper-compiler',
+    tags: [
+      'Compiler Design',
+      'OCaml',
+      'C Programming Language',
+      'Programming Language Design',
+    ],
+  },
+  {
+    id: 3,
     name: 'Kanbas',
     authors: ['Henry Renninger', 'Lizzie Jones', 'Jacob Kline'],
     description: 'A simulation of the teaching and learning software, Canvas',
@@ -28,7 +45,7 @@ const projects: Project[] = [
     backEndUrl: 'https://github.com/jekhi5/Kanbas-backend',
   },
   {
-    id: 3,
+    id: 4,
     name: 'SNAPpy',
     authors: [
       'Andrew Caplan',

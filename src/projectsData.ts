@@ -17,10 +17,10 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    name: 'ViPER Program Language and Compiler',
+    name: 'ViPER',
     authors: ['Emery Jacobowitz', 'Jacob Kline'],
     description:
-      'A robust functional language with a built in testing framework for snake enthusiasts',
+      'An x86_64 compiler for a robust functional language implementing features such as exception handling, garbage collection, and register allocation',
     image: 'ViPER.png',
     imageAltText: 'ViPER text with the text "Verifying Programs Execute Right',
     githubUrl:

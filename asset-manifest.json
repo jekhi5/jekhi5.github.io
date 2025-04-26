@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.97b05f45.css",
-    "main.js": "/static/js/main.4d902e5e.js",
+    "main.js": "/static/js/main.d76affb7.js",
     "static/media/NorthStarImage.png": "/static/media/NorthStarImage.9ae15536f0368fa6977f.png",
     "static/media/ViPER.png": "/static/media/ViPER.440f4b8c6ccb9d20c882.png",
     "static/media/SNAPpyImage.png": "/static/media/SNAPpyImage.4e448b1f11fe3597f939.png",
@@ -15,10 +15,10 @@
     "static/media/Generate.svg": "/static/media/Generate.ed9bec6fe626c3e47f98.svg",
     "index.html": "/index.html",
     "main.97b05f45.css.map": "/static/css/main.97b05f45.css.map",
-    "main.4d902e5e.js.map": "/static/js/main.4d902e5e.js.map"
+    "main.d76affb7.js.map": "/static/js/main.d76affb7.js.map"
   },
   "entrypoints": [
     "static/css/main.97b05f45.css",
-    "static/js/main.4d902e5e.js"
+    "static/js/main.d76affb7.js"
   ]
 }

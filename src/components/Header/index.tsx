@@ -56,6 +56,18 @@ const Header = () => {
                 Work History
               </NavLink>
             </li>
+
+            <li className="nav-item">
+              <NavLink
+                to="/contact"
+                id="projects-button"
+                className={({ isActive }) =>
+                  `nav-link ${isActive ? 'active fw-bold text-primary' : ''}`
+                }
+              >
+                Contact Me
+              </NavLink>
+            </li>
           </ul>
         </div>
       </div>

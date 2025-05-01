@@ -6,6 +6,7 @@ import Header from 'components/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import WorkHistory from 'components/WorkHistory';
+import ContactForm from 'components/ContactForm';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/work" element={<WorkHistory />} />
+        <Route path="/contact" element={<ContactForm />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </div>

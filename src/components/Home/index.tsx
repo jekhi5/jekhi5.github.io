@@ -1,5 +1,5 @@
-import { FaFilePdf, FaGithub, FaLinkedin } from 'react-icons/fa';
 import './index.css';
+import DetailButtons from './DetailButtons';
 
 export default function Home() {
   return (
@@ -20,35 +20,7 @@ export default function Home() {
           playing Mario Kart (I guess I like to drive fast).
         </div>
 
-        <div className="d-flex justify-content-center gap-3">
-          <a
-            href="https://www.linkedin.com/in/jacob-e-kline"
-            target="_blank"
-            rel="noreferrer"
-            className="btn btn-outline-primary d-flex align-items-center gap-1"
-          >
-            <FaLinkedin />
-            LinkedIn
-          </a>
-          <a
-            href="https://www.github.com/jekhi5"
-            target="_blank"
-            rel="noreferrer"
-            className="btn btn-outline-dark d-flex align-items-center gap-1"
-          >
-            <FaGithub />
-            GitHub
-          </a>
-          <a
-            href={`${process.env.PUBLIC_URL}/Jacob_Kline.pdf`}
-            target="_blank"
-            rel="noreferrer"
-            className="btn btn-outline-dark d-flex align-items-center gap-1"
-          >
-            <FaFilePdf />
-            Resume
-          </a>
-        </div>
+        <DetailButtons />
       </div>
     </div>
   );

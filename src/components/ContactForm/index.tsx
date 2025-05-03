@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import './index.css';
 import DetailButtons from 'components/Home/DetailButtons';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const apiBase = 'https://jekhi5.netlify.app';
 
@@ -24,6 +25,8 @@ export default function ContactForm() {
     inquiryReasons[defaultInquiryReason]
   );
 
+  const gReCAPTCHAResponse = useRef(null);
+
   const sendEmail = async (e: any) => {
     e.persist();
     e.preventDefault();
@@ -31,11 +34,16 @@ export default function ContactForm() {
 
     const newMessage = `Inquiry Reason: ${formInquiryReason}\n\n ${formMessage}`;
 
+    const gReCAPTCHACurrent = gReCAPTCHAResponse.current;
+    const token =
+      gReCAPTCHACurrent !== null ? (gReCAPTCHACurrent as any).getValue() : null;
+
     const formData = {
       name: formName,
       email: formEmail,
       message: newMessage,
       title: formSubject,
+      gReCAPTCHAResponse: token,
     };
 
     const res = await fetch(`${apiBase}/api/form_submit`, {
@@ -43,6 +51,10 @@ export default function ContactForm() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),
     });
+
+    if (gReCAPTCHACurrent !== null) {
+      (gReCAPTCHACurrent as any).reset();
+    }
 
     if (res.ok) {
       setStateMessage('Message sent!');
@@ -66,8 +78,15 @@ export default function ContactForm() {
     setFormInquiryReason(inquiryReasons[key]);
   }
 
+  function handleReCAPTCHAError() {
+    setStateMessage('There was an error with the ReCAPTCHA. Please try again.');
+    setTimeout(() => {
+      setStateMessage('');
+    }, 5000);
+  }
+
   return (
-    <div className="vh-100">
+    <div>
       <div className="contact-form">
         <h2>Contact Me</h2>
         <h6>
@@ -118,8 +137,13 @@ export default function ContactForm() {
             onChange={(e) => setFormMessage(e.currentTarget.value)}
             required
           />
+          <ReCAPTCHA
+            sitekey="6Lc9Ny0rAAAAAOBvfdHU39NukwQjM2_f0_q303Q4"
+            onErrored={handleReCAPTCHAError}
+            ref={gReCAPTCHAResponse}
+          />
           <input type="submit" value="Send" disabled={isSubmitting} />
-          {stateMessage && <p>{stateMessage}</p>}
+          {stateMessage && <p>{stateMessage.replace(/"|"/g, '')}</p>}
         </form>
       </div>
     </div>

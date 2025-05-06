@@ -17,6 +17,7 @@ export default function ContactForm() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [stateMessage, setStateMessage] = useState('');
+  const [messageIsError, setMessageIsError] = useState(false);
   const [formName, setFormName] = useState('');
   const [formEmail, setFormEmail] = useState('');
   const [formMessage, setFormMessage] = useState('');
@@ -27,10 +28,21 @@ export default function ContactForm() {
 
   const gReCAPTCHAResponse = useRef(null);
 
+  function isProbablyValidEmail(email: string) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
   const sendEmail = async (e: any) => {
     e.persist();
     e.preventDefault();
     setIsSubmitting(true);
+
+    if (!isProbablyValidEmail(formEmail)) {
+      setMessageIsError(true);
+      setStateMessage('Please enter a valid email address.');
+      setIsSubmitting(false);
+      return;
+    }
 
     const newMessage = `Inquiry Reason: ${formInquiryReason}\n\n ${formMessage}`;
 
@@ -57,6 +69,7 @@ export default function ContactForm() {
     }
 
     if (res.ok) {
+      setMessageIsError(false);
       setStateMessage('Message sent!');
       setIsSubmitting(false);
       setTimeout(() => {
@@ -66,10 +79,12 @@ export default function ContactForm() {
       e.target.reset();
     } else {
       const responseText = await res.text();
+      setMessageIsError(true);
       setStateMessage(responseText);
       setIsSubmitting(false);
       setTimeout(() => {
         setStateMessage('');
+        setMessageIsError(false);
       }, 5000);
     }
   };
@@ -79,9 +94,11 @@ export default function ContactForm() {
   }
 
   function handleReCAPTCHAError() {
+    setMessageIsError(true);
     setStateMessage('There was an error with the ReCAPTCHA. Please try again.');
     setTimeout(() => {
       setStateMessage('');
+      setMessageIsError(false);
     }, 5000);
   }
 
@@ -95,6 +112,15 @@ export default function ContactForm() {
         </h6>
         <DetailButtons />
         <form onSubmit={sendEmail} className="">
+          {stateMessage && (
+            <p
+              className={`fw-bold text-center pt-3 ${
+                messageIsError ? 'text-danger' : 'text-success'
+              }`}
+            >
+              {stateMessage.replace(/"|"/g, '')}
+            </p>
+          )}
           <input
             type="text"
             name="name"
@@ -143,7 +169,6 @@ export default function ContactForm() {
             ref={gReCAPTCHAResponse}
           />
           <input type="submit" value="Send" disabled={isSubmitting} />
-          {stateMessage && <p>{stateMessage.replace(/"|"/g, '')}</p>}
         </form>
       </div>
     </div>

@@ -41,6 +41,7 @@ const workData: Work[] = [
     company: 'Sexual Violence Prevention Educator',
     role: 'Office of Prevention and Education, Northeastern University',
     startDate: new Date('09/01/2024'),
+    endDate: new Date('05/01/2025'),
     bullets: [
       'Lead 8+ comprehensive bystander intervention and sexual violence prevention presentations per semester, reaching 350+ freshman',
       'Present 4+ specialized sexual violence prevention programs to Fraternity and Sorority Life organizations per semester, each for 75+ members',
@@ -82,6 +83,7 @@ const workData: Work[] = [
     company: 'Vice President',
     role: 'Northeastern University Sexual Health Advocacy, Resources, and Education',
     startDate: new Date('09/01/2021'),
+    endDate: new Date('05/01/2025'),
     bullets: [
       'Lead weekly meetings for 30+ students on interpersonal communication, boundary setting, and healthy relationship development',
       'Advocate for accessible sexual health resources, securing an 88% markdown on essential products',

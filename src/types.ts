@@ -24,5 +24,4 @@ export interface Work {
   companyUrl: string;
   logo?: string; // name of logo in data folder
   tags: string[];
-  type: 'technical' | 'additional';
 }

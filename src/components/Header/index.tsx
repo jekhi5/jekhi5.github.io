@@ -28,7 +28,11 @@ const Header = () => {
                 to="/home"
                 id="home-button"
                 className={({ isActive }) =>
-                  `nav-link ${isActive ? 'active fw-bold text-primary' : ''}`
+                  `nav-link ${
+                    isActive || window.location.href.indexOf('#') === -1
+                      ? 'active fw-bold text-primary'
+                      : ''
+                  }`
                 }
               >
                 Home

@@ -1,5 +1,5 @@
 export enum WorkType {
-  Technical,
-  Additional,
-  Certification
+    Technical,
+    Additional,
+    Certification,
 }

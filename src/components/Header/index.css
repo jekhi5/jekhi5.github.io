@@ -1,15 +1,15 @@
 .nav-link {
-  transition: color 0.3s ease, transform 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #0056b3;
-  transform: scale(1.1);
+    color: #0056b3;
+    transform: scale(1.1);
 }
 
 .navbar {
-  position: fixed !important;
-  z-index: 100 !important;
-  top: 0;
-  width: 100%;
+    position: fixed !important;
+    z-index: 100 !important;
+    top: 0;
+    width: 100%;
 }

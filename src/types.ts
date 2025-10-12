@@ -25,3 +25,15 @@ export interface Work {
   logo?: string; // name of logo in data folder
   tags: string[];
 }
+
+export interface Certification {
+  id: number;
+  title: string;
+  issuingBody: string;
+  credentialID?: string;
+  issuingBodyUrl: string;
+  verificationUrl?: string;
+  issueDate: Date;
+  expiryDate?: Date;
+  certificationImage: string;
+}

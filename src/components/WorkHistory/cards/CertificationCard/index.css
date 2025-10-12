@@ -1,0 +1,80 @@
+.cert-item {
+    padding: 20px 20px 5px;
+}
+
+.cert-item.expired {
+    opacity: 0.75;
+    border-color: #ffc9c9;
+}
+
+.verify-badge {
+    margin-left: 8px;
+    color: #007bff;
+    font-size: 0.9em;
+    transition: transform 0.2s ease;
+}
+
+.cert-link:hover .verify-badge {
+    transform: translateX(2px);
+}
+
+.cert-status-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.cert-status-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.cert-active-label,
+.cert-expired-label,
+.cert-no-expiry-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 5px;
+    height: 24px;
+    line-height: 1;
+}
+
+.cert-active-label {
+    background-color: #d6fac0;
+    color: #589e2c;
+}
+
+.cert-expired-label {
+    background-color: #f8d7da;
+    color: #842029;
+}
+
+.cert-no-expiry-label {
+    background-color: #e2e3e5;
+    color: #41464b;
+}
+
+.cert-verify-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    padding: 4px 10px;
+    height: 24px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cert-verify-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}

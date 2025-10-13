@@ -1,15 +1,16 @@
 #project-card {
     position: relative;
     overflow: hidden;
-    transition: width 0.5s ease, transform 0.5s ease, box-shadow 0.5s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
     width: 100%;
     max-height: 100%;
+    transform-origin: center center;
 }
 
 #project-card:hover {
-    width: 130%;
+    transform: scale(1.1);
     z-index: 10;
-    transform: translateX(calc(-15%));
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 .card-body-wrapper {
@@ -40,16 +41,30 @@
     text-overflow: ellipsis;
 }
 
-.truncated-description {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
+.truncated-description,
+.full-description {
     overflow: hidden;
-    text-overflow: ellipsis;
+    transition: opacity 0.4s ease, max-height 0.5s ease;
+}
+
+.truncated-description {
+    max-height: 4.5em; /* roughly 3 lines of text */
+    opacity: 1;
+}
+
+#project-card:hover .truncated-description {
+    opacity: 0;
+    max-height: 0;
 }
 
 .full-description {
-    display: none;
+    max-height: 0;
+    opacity: 0;
+}
+
+#project-card:hover .full-description {
+    opacity: 1;
+    max-height: 20em; /* enough for your full text */
 }
 
 #project-card:hover .card-text {
@@ -98,13 +113,27 @@
         border-radius: 0.5rem;
         margin-right: 0;
     }
-
+    /* Keep the card still (no hover grow/translate) */
     #project-card {
-        width: 100%;
-        transform: none;
+        transform: none !important;
+        width: 100% !important;
     }
 
-    #project-card:hover .card-body-wrapper {
-        transform: none;
+    /* Always show full text */
+    .truncated-description {
+        display: none !important;
+    }
+
+    .full-description {
+        display: block !important;
+        opacity: 1 !important;
+        max-height: none !important;
+    }
+
+    /* Optional: Remove transitions for snappier mobile feel */
+    #project-card,
+    .truncated-description,
+    .full-description {
+        transition: none !important;
     }
 }

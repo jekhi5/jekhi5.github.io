@@ -3,7 +3,7 @@ import DetailButtons from './DetailButtons';
 
 export default function Home() {
     return (
-        <div className="d-flex justify-content-center align-items-center vh-100 text-center">
+        <div className="d-flex justify-content-center align-items-center min-vh-100 text-center pb-5 pt-5">
             <div>
                 <img
                     src={require('../../data/imageData/profile.jpg')}

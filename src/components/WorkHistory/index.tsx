@@ -17,7 +17,7 @@ export default function WorkHistory() {
     return (
         <div className="work-history">
             <h2>Work Experience</h2>
-            <div className="filters">
+            <div className="filters d-flex flex-md-row flex-column">
                 <button
                     className={`filter-button ${
                         filter === WorkType.Technical ? 'active' : ''

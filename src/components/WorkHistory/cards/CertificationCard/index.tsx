@@ -50,7 +50,7 @@ const CertificationCard = ({ cert }: { cert: Certification }) => {
                             <> - {formatDate(cert.expiryDate)}</>
                         )}
                     </p>
-                    <div className="cert-status-container">
+                    <div className="cert-status-container text-nowrap">
                         {cert.expiryDate ? (
                             isExpired ? (
                                 <span className="cert-expired-label">
@@ -71,7 +71,7 @@ const CertificationCard = ({ cert }: { cert: Certification }) => {
                             href={cert.verificationUrl}
                             target="_blank"
                             rel="noreferrer"
-                            className="cert-verify-button"
+                            className="cert-verify-button text-nowrap"
                         >
                             Verify Credential
                         </a>

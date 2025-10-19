@@ -115,8 +115,10 @@ export default function ContactForm() {
                     experience, please feel free to check out my LinkedIn,
                     GitHub, and Resume below:
                 </h6>
-                <DetailButtons />
-                <form onSubmit={sendEmail} className="">
+                <div className="mb-3">
+                    <DetailButtons />
+                </div>
+                <form onSubmit={sendEmail}>
                     {stateMessage && (
                         <p
                             className={`fw-bold text-center pt-3 ${
@@ -126,48 +128,68 @@ export default function ContactForm() {
                             {stateMessage.replace(/"|"/g, '')}
                         </p>
                     )}
-                    <input
-                        type="text"
-                        name="name"
-                        className="name"
-                        placeholder="Name*"
-                        onChange={(e) => setFormName(e.currentTarget.value)}
-                        required
-                    />
-                    <input
-                        type="email"
-                        name="email"
-                        className="email"
-                        placeholder="Email*"
-                        onChange={(e) => setFormEmail(e.currentTarget.value)}
-                        required
-                    />
-                    <label>Reason for inquiry:</label>
-                    <select
-                        required
-                        defaultValue={defaultInquiryReason}
-                        onChange={(e) => updateInquiry(e.currentTarget.value)}
-                    >
-                        {Object.keys(inquiryReasons).map((key) => (
-                            <option value={key} key={key}>
-                                {inquiryReasons[key]}
-                            </option>
-                        ))}
-                    </select>
-                    <input
-                        type="text"
-                        name="title"
-                        className="title"
-                        placeholder="Subject"
-                        onChange={(e) => setFormSubject(e.currentTarget.value)}
-                    />
-                    <textarea
-                        name="message"
-                        className="message"
-                        placeholder="Message*"
-                        onChange={(e) => setFormMessage(e.currentTarget.value)}
-                        required
-                    />
+                    <div className="mb-3">
+                        <input
+                            type="text"
+                            name="name"
+                            className="name"
+                            placeholder="Name*"
+                            onChange={(e) => setFormName(e.currentTarget.value)}
+                            required
+                        />
+                    </div>
+                    <div className="mb-3">
+                        <input
+                            type="email"
+                            name="email"
+                            className="email"
+                            placeholder="Email*"
+                            onChange={(e) =>
+                                setFormEmail(e.currentTarget.value)
+                            }
+                            required
+                        />
+                    </div>
+                    <div className="mb-3">
+                        <label>Reason for inquiry:</label>
+                    </div>
+                    <div className="mb-3">
+                        <select
+                            required
+                            defaultValue={defaultInquiryReason}
+                            onChange={(e) =>
+                                updateInquiry(e.currentTarget.value)
+                            }
+                        >
+                            {Object.keys(inquiryReasons).map((key) => (
+                                <option value={key} key={key}>
+                                    {inquiryReasons[key]}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+                    <div className="mb-3">
+                        <input
+                            type="text"
+                            name="title"
+                            className="title"
+                            placeholder="Subject"
+                            onChange={(e) =>
+                                setFormSubject(e.currentTarget.value)
+                            }
+                        />
+                    </div>
+                    <div className="mb-3">
+                        <textarea
+                            name="message"
+                            className="message"
+                            placeholder="Message*"
+                            onChange={(e) =>
+                                setFormMessage(e.currentTarget.value)
+                            }
+                            required
+                        />
+                    </div>
                     <ReCAPTCHA
                         sitekey="6Lc9Ny0rAAAAAOBvfdHU39NukwQjM2_f0_q303Q4"
                         onErrored={handleReCAPTCHAError}

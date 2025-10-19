@@ -1,7 +1,18 @@
 import { NavLink } from 'react-router-dom';
 import './index.css';
+import { useRef } from 'react';
 
 const Header = () => {
+    const navTogglerRef = useRef<HTMLButtonElement | null>(null);
+
+    const closeMenu = () => {
+        const toggler = navTogglerRef.current;
+        // 992px is Bootstrap's 'lg' breakpoint
+        if (toggler && window.innerWidth < 992) {
+            toggler.click();
+        }
+    };
+
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
             <div className="container">
@@ -17,6 +28,7 @@ const Header = () => {
                     aria-controls="navbarNav"
                     aria-expanded="false"
                     aria-label="Toggle navigation"
+                    ref={navTogglerRef}
                 >
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -35,6 +47,7 @@ const Header = () => {
                                             : ''
                                     }`
                                 }
+                                onClick={closeMenu}
                             >
                                 Home
                             </NavLink>
@@ -50,6 +63,7 @@ const Header = () => {
                                             : ''
                                     }`
                                 }
+                                onClick={closeMenu}
                             >
                                 Projects
                             </NavLink>
@@ -65,6 +79,7 @@ const Header = () => {
                                             : ''
                                     }`
                                 }
+                                onClick={closeMenu}
                             >
                                 Work History
                             </NavLink>
@@ -80,6 +95,7 @@ const Header = () => {
                                             : ''
                                     }`
                                 }
+                                onClick={closeMenu}
                             >
                                 Contact Me
                             </NavLink>

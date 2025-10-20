@@ -38,12 +38,11 @@ const CertificationCard = ({ cert }: { cert: Certification }) => {
                     >
                         <p className="cert-issuer">{cert.issuingBody}</p>
                     </a>
-                    <p
-                        className="cert-credential-id"
-                        title="Click to verify this credential"
-                    >
-                        Credential ID: {cert.credentialID}{' '}
-                    </p>
+                    {cert.credentialID && (
+                        <p className="cert-credential-id">
+                            Credential ID: {cert.credentialID}{' '}
+                        </p>
+                    )}
                     <p className="duration">
                         {formatDate(cert.issueDate)}
                         {cert.expiryDate && (

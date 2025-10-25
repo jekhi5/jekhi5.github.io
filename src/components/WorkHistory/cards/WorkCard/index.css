@@ -1,0 +1,28 @@
+.work-item {
+    padding: 20px 20px 25px;
+}
+
+.work-item-body {
+    margin-top: 10px;
+}
+
+.description {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.technologies {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.technology {
+    background-color: #e9ecef;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+}

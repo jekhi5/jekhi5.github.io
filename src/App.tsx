@@ -9,18 +9,18 @@ import WorkHistory from 'components/WorkHistory';
 import ContactForm from 'components/ContactForm';
 
 function App() {
-  return (
-    <div className="App">
-      <Header />
-      <Routes>
-        <Route path="" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/work" element={<WorkHistory />} />
-        <Route path="/contact" element={<ContactForm />} />
-        <Route path="*" element={<Home />} />
-      </Routes>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Header />
+            <Routes>
+                <Route path="" element={<Home />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/work" element={<WorkHistory />} />
+                <Route path="/contact" element={<ContactForm />} />
+                <Route path="*" element={<Home />} />
+            </Routes>
+        </div>
+    );
 }
 
 export default App;

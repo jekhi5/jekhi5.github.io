@@ -42,12 +42,13 @@ const technicalWorkData: Work[] = [
         role: 'Software Engineer I',
         startDate: new Date('2025-08'),
         bullets: [
-            'Design, implement, and test new functionality for the device connectivity team',
-            'Work in C++ and Go throughout 4+ cross-functional repositories, supporting millions of device connections',
+            'Author new functionality for and maintain 5 C++ and Go-based services managing communication for hundreds of thousands of wireless cameras',
+            'Develop proprietary C++ libraries used across service infrastructure',
+            'Investigate and improve CI/CD pipelines to maximize efficiency and cryptographic safety',
         ],
         companyUrl: 'https://simplisafe.com',
         logo: 'SimpliSafe.png',
-        tags: ['C++', 'Go'],
+        tags: ['C++', 'Go', 'Bash', 'Python'],
     },
 ];
 

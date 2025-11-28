@@ -1,0 +1,46 @@
+Privacy Policy for Canasta Scorekeeper Last updated: [Insert Date]
+
+Overview Canasta Scorekeeper (“the App”) is designed to help users keep
+track of scores while playing Canasta. The App functions as a simple,
+on-device calculator and score manager. We respect your privacy and are
+committed to being transparent about the minimal data we handle.
+
+Information We Collect No Personal Data Collected The App does not
+collect, store, or transmit any personally identifiable information
+(PII).
+
+We do not collect: - Names - Email addresses - Phone numbers - Payment
+information - Location data - Usage analytics or tracking data
+
+On-Device Data Only The App stores active and previous game scores
+locally on your device only. This data: - Never leaves your device - Is
+never transmitted to any server - Is only used to allow you to continue
+games later
+
+You may delete the App at any time to remove all locally stored data.
+
+In-App Purchases The App offers one optional in-app purchase: a tip to
+support the developer. All purchases are processed securely by Apple’s
+in-app purchase system. The App does not have access to your payment
+information. Apple may collect certain transaction-related data
+according to Apple’s Privacy Policy.
+
+Children’s Privacy Because the App collects no personal information, it
+is safe for users of all ages. We do not knowingly collect data from
+children.
+
+Third-Party Services The App uses no third-party SDKs, analytics tools,
+advertising networks, or tracking technologies.
+
+Data Security Since no data is collected or transmitted, there is no
+risk of external data exposure. Any game data is stored only on your
+device, where its security depends on your device’s operating system
+protections.
+
+Changes to This Privacy Policy If we make changes to this Privacy
+Policy, we will update the “Last updated” date above. Continued use of
+the App after changes are posted constitutes acceptance of the updated
+policy.
+
+Contact If you have any questions about this Privacy Policy, please
+contact: Jacob Kline at CanastaScoresheet+PrivacyPolicy@gmail.com

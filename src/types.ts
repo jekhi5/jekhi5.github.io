@@ -7,6 +7,7 @@ export interface Project {
     imageAltText: string;
     url?: string;
     githubUrl?: string;
+    appleUrl?: string;
     frontEndUrl?: string;
     backEndUrl?: string;
     devpostUrl?: string;

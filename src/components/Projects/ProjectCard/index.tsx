@@ -8,9 +8,9 @@ const ProjectCard = ({ project }: { project: Project }) => {
             id="project-card"
             className="card border border-dark rounded shadow-sm hover-shadow position-relative"
         >
-            {project.url || project.githubUrl ? (
+            {project.url || project.githubUrl || project.appleUrl ? (
                 <a
-                    href={project.url ?? project.githubUrl}
+                    href={project.url ?? project.githubUrl ?? project.appleUrl}
                     target="_blank"
                     rel="noreferrer"
                 >
@@ -48,7 +48,8 @@ const ProjectCard = ({ project }: { project: Project }) => {
                     project.backEndUrl ||
                     project.frontEndUrl ||
                     project.devpostUrl ||
-                    project.caseStudyUrl) && (
+                    project.caseStudyUrl ||
+                    project.appleUrl) && (
                     <DynamicButtonGroup project={project} />
                 )}
 

@@ -83,6 +83,18 @@ const projects: Project[] = [
         githubUrl: 'https://github.com/jekhi5/Camp-Harmony-Connect',
         tags: ['Flutter', 'Dart', 'Firebase', 'Android', 'iOS'],
     },
+
+    {
+        id: 6,
+        name: 'Canasta Scoresheet',
+        authors: ['Jacob Kline'],
+        description:
+            'A customizable, easy to use, and elegant scoring app for the card game, Canasta',
+        image: 'CanastaScoresheetIcon.png',
+        imageAltText: 'Canasta Scoresheet logo',
+        appleUrl: 'https://apps.apple.com/us/app/canasta-scoresheet/id6755802120',
+        tags: ['Flutter', 'Dart', 'Apple', 'Android', 'iOS'],
+    },
 ];
 
 export { projects };

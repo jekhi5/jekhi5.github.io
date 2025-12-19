@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { FaFilePdf, FaGithub, FaGlobe } from 'react-icons/fa';
+import { FaApple, FaFilePdf, FaGithub, FaGlobe } from 'react-icons/fa';
 import { Project } from 'types';
 
 const DynamicButtonGroup = ({ project }: { project: Project }) => {
@@ -126,6 +126,17 @@ const DynamicButtonGroup = ({ project }: { project: Project }) => {
                 >
                     <FaGlobe className="me-1" />
                     Devpost Listing
+                </a>
+            )}
+            {project.appleUrl && (
+                <a
+                    href={project.appleUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn btn-outline-dark d-flex align-items-center justify-content-center"
+                >
+                    <FaApple className="me-1" />
+                    App Store Listing
                 </a>
             )}
         </div>

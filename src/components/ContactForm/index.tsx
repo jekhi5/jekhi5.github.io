@@ -7,13 +7,14 @@ const apiBase = 'https://jekhi5.netlify.app';
 
 export default function ContactForm() {
     const inquiryReasons: { [key: string]: string } = {
-        github: 'GitHub Project Access Request',
         networking: 'Networking',
+        canastaScoresheet: 'Canasta Scoresheet App',
+        github: 'GitHub Project Access Request',
         personal: 'Personal',
         other: 'Other',
     };
 
-    const defaultInquiryReason = 'github';
+    const defaultInquiryReason = 'networking';
 
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [stateMessage, setStateMessage] = useState('');

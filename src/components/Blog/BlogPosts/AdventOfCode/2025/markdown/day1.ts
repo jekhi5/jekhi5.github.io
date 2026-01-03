@@ -48,6 +48,7 @@ instruction caused us to wrap around to the beginning, and then use some math to
 we wrapped:
 
 \`\`\`python
+
 cur_num = 50
 count = 0
 for instruction in instructions:

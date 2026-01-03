@@ -57,7 +57,7 @@ export default function RetractableText({
                 onClick={() => setIsExpanded(!isExpanded)}
             >
                 <span className="retractable-icon">
-                    {isExpanded ? '▼' : '▶'}
+                    {isExpanded ? '\u25BC\uFE0E' /*▼*/ : '\u25B6\uFE0E' /*▶*/}
                 </span>
                 <span className="retractable-title">{getDefaultTitle()}</span>
             </div>

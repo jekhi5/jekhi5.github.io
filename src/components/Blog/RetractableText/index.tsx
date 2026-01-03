@@ -1,25 +1,20 @@
 import { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import './index.css';
-
-export enum retractableHeaderType {
-    DANGER,
-    SUCCESS,
-    NORMAL,
-}
+import { retractableHeaderType } from 'types';
 
 interface RetractableTextProps {
     type: retractableHeaderType;
-    title?: string;
+    title: string;
     markdown: string;
-    startOpen?: boolean;
+    startOpen: boolean;
 }
 
 export default function RetractableText({
     markdown,
     type,
     title,
-    startOpen = true,
+    startOpen,
 }: RetractableTextProps) {
     const [isExpanded, setIsExpanded] = useState(startOpen);
 

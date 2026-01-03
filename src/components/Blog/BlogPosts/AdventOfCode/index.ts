@@ -1,6 +1,7 @@
 import { BlogPost } from 'types';
 import { createLocalDate } from 'utils/dateFormatters';
 import day1Markdown from './2025/markdown/day1';
+import adventOfCodeDialogueBoxes from './dialogueBoxes';
 
 const AdventOfCode2025Posts: BlogPost[] = [
     {
@@ -10,7 +11,7 @@ const AdventOfCode2025Posts: BlogPost[] = [
         summary: 'Solving the first day of Advent of Code 2025 using Python',
         tags: ['Python', 'Algorithms', 'Advent of Code'],
         markdown: day1Markdown,
-        showAoCBox: true,
+        prePostDialogueBoxes: [...adventOfCodeDialogueBoxes],
     },
 ];
 

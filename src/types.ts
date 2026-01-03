@@ -39,6 +39,18 @@ export interface Certification {
     certificationImage: string;
 }
 
+export enum retractableHeaderType {
+    DANGER,
+    SUCCESS,
+    NORMAL,
+}
+export interface DialogueBox {
+    title?: string;
+    type: retractableHeaderType;
+    markdown: string;
+    startOpen?: boolean;
+}
+
 export interface BlogPost {
     id: string;
     title: string;
@@ -46,5 +58,5 @@ export interface BlogPost {
     summary: string;
     tags: string[];
     markdown: string;
-    showAoCBox?: boolean; // Whether to show the Advent of Code explanation box
+    prePostDialogueBoxes?: DialogueBox[]; // Whether to show the Advent of Code explanation box
 }

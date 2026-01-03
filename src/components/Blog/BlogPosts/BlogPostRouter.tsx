@@ -1,8 +1,8 @@
 import { useParams, Navigate, Link } from 'react-router-dom';
 import { posts } from './index';
 import MarkdownBlogPost from '../PostComponent';
-import AoCExplanationBox from './AdventOfCode/AoCExplanationBox';
 import { formatBlogDate } from 'utils/dateFormatters';
+import RetractableText from '../RetractableText';
 
 export default function BlogPostRouter() {
     const { postId } = useParams<{ postId: string }>();
@@ -43,17 +43,23 @@ export default function BlogPostRouter() {
                     ← Back to Blog
                 </Link>
             </div>
-            {post.showAoCBox && (
-                <div
-                    style={{
-                        maxWidth: '800px',
-                        margin: '0 auto',
-                        padding: '0 1rem',
-                    }}
-                >
-                    <AoCExplanationBox />
-                </div>
-            )}
+            {post.prePostDialogueBoxes &&
+                post.prePostDialogueBoxes.map((dialogueBox) => (
+                    <div
+                        style={{
+                            maxWidth: '800px',
+                            margin: '0 auto',
+                            padding: '0 1rem',
+                        }}
+                    >
+                        <RetractableText
+                            title={dialogueBox.title ?? ''}
+                            type={dialogueBox.type}
+                            markdown={dialogueBox.markdown}
+                            startOpen={dialogueBox.startOpen ?? true}
+                        />
+                    </div>
+                ))}
             <MarkdownBlogPost
                 title={post.title}
                 date={formatBlogDate(post.date)}

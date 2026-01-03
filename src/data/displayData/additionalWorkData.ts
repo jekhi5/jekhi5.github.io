@@ -1,15 +1,13 @@
 import { Work } from 'types';
+import { createLocalDate } from 'utils/dateFormatters';
 
 const additionalWorkData: Work[] = [
-    // ALL DATES ENTERED AS UNINDEXED, STANDARD MONTH NUMBER
-    // CONVERSION FOR FRONT-END DISPLAY HAPPENS IN COMPONENTS
-
     {
         id: 1,
         company: 'English for Speakers of Other Languages Teacher',
         role: 'Boston Public Library',
-        startDate: new Date('2022-10'),
-        endDate: new Date('2023-12'),
+        startDate: createLocalDate('2022-10-01'),
+        endDate: createLocalDate('2023-12-01'),
         bullets: [
             'Taught weekly comprehensive English language sessions to 10-15 adult students',
             'Constructed detailed lesson plans about conversational English topics such as idioms and common phrases',
@@ -29,8 +27,8 @@ const additionalWorkData: Work[] = [
         id: 2,
         company: 'Clinical Assistant',
         role: "Boston Children's Hospital, Emergency Department",
-        startDate: new Date('2024-07'),
-        endDate: new Date('2024-09'),
+        startDate: createLocalDate('2024-07-01'),
+        endDate: createLocalDate('2024-09-01'),
         bullets: [
             'Assisted in pediatric trauma stabilization and responded to "Code Blue" emergencies, monitored and reported patient vitals',
             'Supported child life specialist team in patient comfort measures during procedures',
@@ -49,8 +47,8 @@ const additionalWorkData: Work[] = [
         id: 3,
         company: 'Vice President',
         role: 'Northeastern University Sexual Health Advocacy, Resources, and Education',
-        startDate: new Date('2021-09'),
-        endDate: new Date('2025-05'),
+        startDate: createLocalDate('2021-09-01'),
+        endDate: createLocalDate('2025-05-01'),
         bullets: [
             'Lead weekly meetings for 30+ students on interpersonal communication, boundary setting, and healthy relationship development',
             'Advocate for accessible sexual health resources, securing an 88% markdown on essential products',
@@ -69,8 +67,8 @@ const additionalWorkData: Work[] = [
         id: 4,
         company: 'Sexual Violence Prevention Educator',
         role: 'Office of Prevention and Education, Northeastern University',
-        startDate: new Date('2024-09'),
-        endDate: new Date('2025-05'),
+        startDate: createLocalDate('2024-09-01'),
+        endDate: createLocalDate('2025-05-01'),
         bullets: [
             'Lead 8+ comprehensive bystander intervention and sexual violence prevention presentations per semester, reaching 350+ freshman',
             'Present 4+ specialized sexual violence prevention programs to Fraternity and Sorority Life organizations per semester, each for 75+ members',
@@ -88,7 +86,7 @@ const additionalWorkData: Work[] = [
         id: 5,
         company: 'Cataldo Ambulance Service',
         role: 'Emergency Medical Technician',
-        startDate: new Date('2023-06'),
+        startDate: createLocalDate('2023-06-01'),
         bullets: [
             'Treat 10+ patients per 16-hour shift in emergencies and accurately activate pre-hospital codes (cardiac, stroke, and trauma alerts)',
             'Maintain clear and concise communication with patient and other first responders in stressful situations, often in multiple languages',

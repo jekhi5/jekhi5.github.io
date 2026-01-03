@@ -1,12 +1,10 @@
 import '../index.css';
 import './index.css';
 import { Certification } from '../../../../types';
+import { formatShortDate } from '../../../../utils/dateFormatters';
 
 const CertificationCard = ({ cert }: { cert: Certification }) => {
-    const formatDate = (date: Date) =>
-        `${date.getMonth() + 1}/${date.getDate() - 1}/${date.getFullYear()}`;
-
-    const isExpired = cert.expiryDate && new Date(cert.expiryDate) < new Date();
+    const isExpired = cert.expiryDate && cert.expiryDate < new Date();
 
     return (
         <div className={`cert-item ${isExpired ? 'expired' : ''}`}>
@@ -44,9 +42,9 @@ const CertificationCard = ({ cert }: { cert: Certification }) => {
                         </p>
                     )}
                     <p className="duration">
-                        {formatDate(cert.issueDate)}
+                        {formatShortDate(cert.issueDate)}
                         {cert.expiryDate && (
-                            <> - {formatDate(cert.expiryDate)}</>
+                            <> - {formatShortDate(cert.expiryDate)}</>
                         )}
                     </p>
                     <div className="cert-status-container text-nowrap">

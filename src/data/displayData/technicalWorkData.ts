@@ -1,14 +1,13 @@
 import { Work } from 'types';
+import { createLocalDate } from 'utils/dateFormatters';
 
 const technicalWorkData: Work[] = [
-    // ALL DATES ENTERED AS UNINDEXED, STANDARD MONTH NUMBER
-    // CONVERSION FOR FRONT-END DISPLAY HAPPENS IN COMPONENTS
     {
         id: 1,
         company: "Generate Product Development Studio - Cait's Curates",
         role: 'Software Engineer',
-        startDate: new Date('2023-06'),
-        endDate: new Date('2023-12'),
+        startDate: createLocalDate('2023-06-01'),
+        endDate: createLocalDate('2023-12-01'),
         bullets: [
             'Designed and implemented a React and Go-based gift-curator application which nearly doubled existing customer base',
             'Developed a backend system from the ground up for managing user requests and curator suggestions, ensuring data integrity',
@@ -23,8 +22,8 @@ const technicalWorkData: Work[] = [
         id: 2,
         company: 'Wood Mackenzie',
         role: 'Full Stack Software Engineering Co-op',
-        startDate: new Date('2023-07'),
-        endDate: new Date('2023-12'),
+        startDate: createLocalDate('2023-07-01'),
+        endDate: createLocalDate('2023-12-01'),
         bullets: [
             'Directly responsible for 8 research initiatives within legacy Typescript codebase and for designing implementation plan for nascent user product',
             'Wrote and maintained new ElasticSearch & GraphQL schemas and queries that enhanced data interaction efficiency across 15+ datasets',
@@ -40,7 +39,7 @@ const technicalWorkData: Work[] = [
         id: 3,
         company: 'SimpliSafe',
         role: 'Software Engineer I',
-        startDate: new Date('2025-08'),
+        startDate: createLocalDate('2025-08-01'),
         bullets: [
             'Author new functionality for and maintain 5 C++ and Go-based services managing communication for hundreds of thousands of wireless cameras',
             'Develop proprietary C++ libraries used across service infrastructure',

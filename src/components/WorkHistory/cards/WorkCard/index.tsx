@@ -1,12 +1,9 @@
 import '../index.css';
 import './index.css';
 import { Work } from '../../../../types';
+import { formatMonthYear } from '../../../../utils/dateFormatters';
 
 const WorkCard = ({ work }: { work: Work }) => {
-    // 2 is added to the date because the `Date` class accepts dates as indexed
-    // 0-11 (January - December) and this correctly displays the intended date on front end
-    const formatDate = (date: Date) =>
-        `${date.getMonth() + 2}/${date.getFullYear()}`;
 
     return (
         <div className="work-item">
@@ -40,8 +37,8 @@ const WorkCard = ({ work }: { work: Work }) => {
                     </a>
 
                     <p className="duration">
-                        {formatDate(work.startDate)} -{' '}
-                        {work.endDate ? formatDate(work.endDate) : 'Present'}
+                        {formatMonthYear(work.startDate)} -{' '}
+                        {work.endDate ? formatMonthYear(work.endDate) : 'Present'}
                     </p>
                 </div>
             </div>

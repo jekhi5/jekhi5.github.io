@@ -1,9 +1,7 @@
 import { Certification } from 'types';
+import { createLocalDate } from 'utils/dateFormatters';
 
 const certificationsData: Certification[] = [
-    // ALL DATES ENTERED AS UNINDEXED, STANDARD MONTH NUMBER
-    // CONVERSION FOR FRONT-END DISPLAY HAPPENS IN COMPONENTS
-
     {
         id: 1,
         title: 'Certificate in Interfaith Leadership',
@@ -11,7 +9,7 @@ const certificationsData: Certification[] = [
         issuingBodyUrl: 'https://www.interfaithamerica.org/',
         verificationUrl:
             'https://www.credly.com/badges/ea3f73bf-f861-4c0c-90a8-9044a7460038/linked_in_profile',
-        issueDate: new Date('2023-08-16'),
+        issueDate: createLocalDate('2023-08-16'),
         certificationImage: 'InterfaithAmerica.png',
     },
     {
@@ -22,8 +20,8 @@ const certificationsData: Certification[] = [
         issuingBodyUrl: 'https://www.heart.org/',
         verificationUrl:
             'https://ecards.heart.org/student/eCards?cid=48D9DAEA-F975-49E7-B210-59A387091993',
-        issueDate: new Date('2025-01-09'),
-        expiryDate: new Date('2027-01'),
+        issueDate: createLocalDate('2025-01-09'),
+        expiryDate: createLocalDate('2027-01-01'),
         certificationImage: 'AHA.png',
     },
     {
@@ -35,8 +33,8 @@ const certificationsData: Certification[] = [
             'https://www.mass.gov/orgs/office-of-emergency-medical-services',
         verificationUrl:
             'https://checkahealthlicense.mass.gov/profiles/1340000',
-        issueDate: new Date('2023-04-26'),
-        expiryDate: new Date('2027-03-31'),
+        issueDate: createLocalDate('2023-04-26'),
+        expiryDate: createLocalDate('2027-03-31'),
         certificationImage: 'MAStateSeal.png',
     },
     {
@@ -48,7 +46,7 @@ const certificationsData: Certification[] = [
         issuingBodyUrl: 'https://www.northeastern.edu/',
         verificationUrl:
             'https://neu-events-platform.public-apps.okd4-prod.okd4-prod.northeastern.edu/onlinediplomas/',
-        issueDate: new Date('2025-08-23'),
+        issueDate: createLocalDate('2025-08-23'),
         certificationImage: 'Northeastern.png',
     },
 ];

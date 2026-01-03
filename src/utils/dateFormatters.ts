@@ -1,6 +1,9 @@
 /**
  * Create a date from YYYY-MM-DD string in local timezone (not UTC)
  * Prevents timezone issues where dates shift by a day
+ *
+ * @param dateString - Date string in YYYY-MM-DD format (e.g., '2025-01-15')
+ * @returns Date object in local timezone
  */
 export function createLocalDate(dateString: string): Date {
     const [year, month, day] = dateString.split('-').map(Number);
@@ -28,6 +31,15 @@ export function formatShortDate(date: Date): string {
         month: 'short',
         day: 'numeric',
     });
+}
+
+/**
+ * Format a date as month and year only (e.g., "10/2025")
+ */
+export function formatMonthYear(date: Date): string {
+    const month = date.getMonth() + 1; // getMonth() is 0-indexed
+    const year = date.getFullYear();
+    return `${month}/${year}`;
 }
 
 /**

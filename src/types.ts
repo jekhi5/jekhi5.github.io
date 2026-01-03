@@ -38,3 +38,13 @@ export interface Certification {
     expiryDate?: Date;
     certificationImage: string;
 }
+
+export interface BlogPost {
+    id: string;
+    title: string;
+    date: Date;
+    summary: string;
+    tags: string[];
+    markdown: string;
+    showAoCBox?: boolean; // Whether to show the Advent of Code explanation box
+}

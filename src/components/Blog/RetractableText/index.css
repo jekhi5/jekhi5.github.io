@@ -1,0 +1,117 @@
+.retractable-box {
+    border-radius: 4px;
+    margin: 1.5rem 0;
+    overflow: hidden;
+    border: 1px solid;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.retractable-header {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.retractable-header:hover {
+    opacity: 0.9;
+}
+
+.retractable-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    margin-right: 0.5rem;
+    font-size: 0.7rem;
+    transition: transform 0.2s ease;
+}
+
+.retractable-title {
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+}
+
+.retractable-content {
+    padding: 1rem 1rem 1rem 2.5rem;
+    line-height: 1.6;
+}
+
+.retractable-content p {
+    margin: 0 0 1rem 0;
+}
+
+.retractable-content p:last-child {
+    margin-bottom: 0;
+}
+
+.retractable-content a {
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+.retractable-content a:hover {
+    opacity: 0.7;
+}
+
+.retractable-content strong {
+    font-weight: 600;
+}
+
+.retractable-content ul,
+.retractable-content ol {
+    margin: 0 0 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.retractable-content li {
+    margin-bottom: 0.5rem;
+}
+
+/* Normal/Info type - Blue */
+.retractable-normal {
+    background-color: #e7f2ff;
+    border-color: #75a9db;
+}
+
+.retractable-normal .retractable-header {
+    background-color: #d0e4f7;
+    color: #0052cc;
+}
+
+.retractable-normal .retractable-content {
+    color: #1a4d7a;
+}
+
+/* Success type - Green */
+.retractable-success {
+    background-color: #e3fcef;
+    border-color: #57d9a3;
+}
+
+.retractable-success .retractable-header {
+    background-color: #c1f0d8;
+    color: #006644;
+}
+
+.retractable-success .retractable-content {
+    color: #0a5c3c;
+}
+
+/* Danger/Warning type - Red/Orange */
+.retractable-danger {
+    background-color: #fff4e5;
+    border-color: #ff991f;
+}
+
+.retractable-danger .retractable-header {
+    background-color: #ffe7bf;
+    color: #974f0c;
+}
+
+.retractable-danger .retractable-content {
+    color: #7a3e0a;
+}

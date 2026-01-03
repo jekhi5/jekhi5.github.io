@@ -86,6 +86,22 @@ const Header = () => {
                         </li>
                         <li className="nav-item">
                             <NavLink
+                                to="/blog"
+                                id="blog-button"
+                                className={({ isActive }) =>
+                                    `nav-link ${
+                                        isActive
+                                            ? 'active fw-bold text-primary'
+                                            : ''
+                                    }`
+                                }
+                                onClick={closeMenu}
+                            >
+                                Blog
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink
                                 to="/contact"
                                 id="projects-button"
                                 className={({ isActive }) =>

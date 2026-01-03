@@ -7,6 +7,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import WorkHistory from 'components/WorkHistory';
 import ContactForm from 'components/ContactForm';
+import BlogList from 'components/Blog/index';
+import BlogPostRouter from 'components/Blog/BlogPosts/BlogPostRouter';
 
 function App() {
     return (
@@ -17,6 +19,8 @@ function App() {
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/work" element={<WorkHistory />} />
                 <Route path="/contact" element={<ContactForm />} />
+                <Route path="/blog" element={<BlogList />} />
+                <Route path="/blog/:postId" element={<BlogPostRouter />} />
                 <Route path="*" element={<Home />} />
             </Routes>
         </div>

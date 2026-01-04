@@ -41,9 +41,10 @@ export default function BlogPost({
                                     customStyle={{
                                         borderRadius: '8px',
                                         fontSize: '14px',
+                                        padding: '1rem',
                                     }}
                                 >
-                                    {String(children).replace(/\n$/, '')}
+                                    {String(children).replace(/^\n|\n$/g, '')}
                                 </SyntaxHighlighter>
                             ) : (
                                 <code className={className} {...props}>

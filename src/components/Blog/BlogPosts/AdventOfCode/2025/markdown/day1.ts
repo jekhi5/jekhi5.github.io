@@ -12,7 +12,6 @@ For this problem, I don't notice any signs of optimal substructure that pushed m
 The tricky bit here is ensuring that the boundaries of the dial are understood, so that an instruction of \`R5\` ("turn the dial to the right 5 clicks") when the dial is pointed at \`99\` leaves the dial pointing at \`4\`, not the nonexistent \`104\` tick.
 
 \`\`\`python
-
 cur_num = 50 # The starting number
 count = 0
 for instruction in instructions:
@@ -48,7 +47,6 @@ instruction caused us to wrap around to the beginning, and then use some math to
 we wrapped:
 
 \`\`\`python
-
 cur_num = 50
 count = 0
 for instruction in instructions:

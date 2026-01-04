@@ -2,6 +2,10 @@ import { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import './index.css';
 import { retractableHeaderType } from 'types';
+import {
+    DOWN_POINTED_TRIANGLE,
+    RIGHT_POINTED_TRIANGLE,
+} from 'utils/unicodeMarks';
 
 interface RetractableTextProps {
     type: retractableHeaderType;
@@ -52,7 +56,9 @@ export default function RetractableText({
                 onClick={() => setIsExpanded(!isExpanded)}
             >
                 <span className="retractable-icon">
-                    {isExpanded ? '\u25BC\uFE0E' /*▼*/ : '\u25B6\uFE0E' /*▶*/}
+                    {isExpanded
+                        ? DOWN_POINTED_TRIANGLE
+                        : RIGHT_POINTED_TRIANGLE}
                 </span>
                 <span className="retractable-title">{getDefaultTitle()}</span>
             </div>

@@ -1,3 +1,5 @@
+import { CHECK_MARK } from 'utils/unicodeMarks';
+
 const markdown = `## The Problem
 
 [Puzzle link](https://www.adventofcode.com/2025/day/3)
@@ -37,8 +39,8 @@ return final_number_digits[0:2]
 
 That last condition is vital. Consider the selection string of \`219\`. At a certain point in our program, \`final_number_digits\` will be \`[2]\` and we'll be considering the final digit in the selection string, \`9\`.
 
-- \`final_number_digits\` has digits left [check]
-- \`potential_digit\` (\`9\`) is greater than the right-most digit in \`final_number\` (\`2\`) [check]
+- \`final_number_digits\` has digits left [${CHECK_MARK}]
+- \`potential_digit\` (\`9\`) is greater than the right-most digit in \`final_number\` (\`2\`) [${CHECK_MARK}]
 - _**but**_, if we pop \`2\` off of the final number and then append \`9\`, there would be no more digits in \`selection_string\` to make a 2-digit number. Thus, the largest 2-digit number we can construct from \`219\` is \`29\`.
 
 Turning this into actual Python code and adding the input-parsing logic:

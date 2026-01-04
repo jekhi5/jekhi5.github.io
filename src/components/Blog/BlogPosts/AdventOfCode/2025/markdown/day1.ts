@@ -3,11 +3,10 @@ const markdown = `## The Problem
 [Puzzle link](https://www.adventofcode.com/2025/day/1)
 
 Day 1 tasked us with keeping track of which numbers a safe dial is pointing at while we follow instructions to turn it. The safe has ticks for numbers \`0-99\`.
-For part 1, we're asked how many times the dial's arrow points exactly at \`0\` after following each instruction to turn the dial a certain number of clicks right or left.
 
 ## Part 1
 
-For this problem, I don't notice any signs of optimal substructure that pushed me towards a [Dynamic Programming](https://en.wikipedia.org/wiki/Dynamic_programming) (DP) solution, nor do I see any optimizations that preprocessing the input would provide. Therefore, I went ahead and designed a solution that looked at each instruction one at a time and processed each once.
+For part 1, we're asked how many times the dial's arrow points exactly at \`0\` after following each instruction to turn the dial a certain number of clicks right or left. I don't notice any signs of optimal substructure that pushed me towards a [Dynamic Programming](https://en.wikipedia.org/wiki/Dynamic_programming) (DP) solution, nor do I see any optimizations that preprocessing the input would provide. Therefore, I went ahead and designed a solution that looked at each instruction one at a time and processed each once.
 
 The tricky bit here is ensuring that the boundaries of the dial are understood, so that an instruction of \`R5\` ("turn the dial to the right 5 clicks") when the dial is pointed at \`99\` leaves the dial pointing at \`4\`, not the nonexistent \`104\` tick.
 

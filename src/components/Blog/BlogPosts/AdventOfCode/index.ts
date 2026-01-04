@@ -9,7 +9,7 @@ const AdventOfCode2025Posts: BlogPost[] = [
     {
         id: 'aoc-2025-day-1',
         title: 'Advent of Code 2025 - Day 1',
-        date: createLocalDate('2025-12-01'),
+        date: createLocalDate('2026-01-03'),
         summary: 'Solving the first day of Advent of Code 2025 using Python',
         tags: ['Python', 'Algorithms', 'Advent of Code'],
         markdown: day1Markdown,
@@ -18,7 +18,7 @@ const AdventOfCode2025Posts: BlogPost[] = [
     {
         id: 'aoc-2025-day-2',
         title: 'Advent of Code 2025 - Day 2',
-        date: createLocalDate('2025-12-02'),
+        date: createLocalDate('2026-01-03'),
         summary: 'Solving the second day of Advent of Code 2025 using Python',
         tags: ['Python', 'Algorithms', 'Advent of Code'],
         markdown: day2Markdown,
@@ -27,7 +27,7 @@ const AdventOfCode2025Posts: BlogPost[] = [
     {
         id: 'aoc-2025-day-3',
         title: 'Advent of Code 2025 - Day 3',
-        date: createLocalDate('2025-12-03'),
+        date: createLocalDate('2026-01-03'),
         summary: 'Solving the third day of Advent of Code 2025 using Python',
         tags: ['Python', 'Algorithms', 'Advent of Code'],
         markdown: day3Markdown,

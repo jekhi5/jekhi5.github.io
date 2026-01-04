@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.a0bbfed1.css",
-    "main.js": "/static/js/main.79f0d7dc.js",
+    "main.js": "/static/js/main.5167de5e.js",
     "static/media/NorthStarImage.png": "/static/media/NorthStarImage.9ae15536f0368fa6977f.png",
     "static/media/ViPER.png": "/static/media/ViPER.440f4b8c6ccb9d20c882.png",
     "static/media/CanastaScoresheetIcon.png": "/static/media/CanastaScoresheetIcon.b6273505f9296040f43d.png",
@@ -21,10 +21,10 @@
     "static/media/Generate.svg": "/static/media/Generate.ed9bec6fe626c3e47f98.svg",
     "index.html": "/index.html",
     "main.a0bbfed1.css.map": "/static/css/main.a0bbfed1.css.map",
-    "main.79f0d7dc.js.map": "/static/js/main.79f0d7dc.js.map"
+    "main.5167de5e.js.map": "/static/js/main.5167de5e.js.map"
   },
   "entrypoints": [
     "static/css/main.a0bbfed1.css",
-    "static/js/main.79f0d7dc.js"
+    "static/js/main.5167de5e.js"
   ]
 }

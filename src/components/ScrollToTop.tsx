@@ -17,12 +17,16 @@ export default function ScrollToTop() {
             window.scrollTo({
                 top: 0,
                 left: 0,
-                behavior: shouldAnimate ? 'smooth' : ('instant' as ScrollBehavior),
+                behavior: shouldAnimate
+                    ? 'smooth'
+                    : ('instant' as ScrollBehavior),
             });
             document.documentElement.scrollTop = 0;
             document.body.scrollTop = 0;
         }, 0);
-    }, [pathname, reduceMotionEnabled]);
+        // No need to scroll when the user toggles the reduce motion option
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [pathname]);
 
     return null;
 }

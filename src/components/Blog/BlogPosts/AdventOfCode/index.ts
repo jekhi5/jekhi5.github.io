@@ -5,6 +5,7 @@ import day2Markdown from './2025/markdown/day2';
 import day3Markdown from './2025/markdown/day3';
 import day4Markdown from './2025/markdown/day4';
 import day5Markdown from './2025/markdown/day5';
+import day6Markdown from './2025/markdown/day6';
 import adventOfCodeDialogueBoxes from './dialogueBoxes';
 
 const AdventOfCode2025Posts: BlogPost[] = [
@@ -59,6 +60,15 @@ const AdventOfCode2025Posts: BlogPost[] = [
             'Identifying valid IDs by ensuring they fall within overlapping valid ranges',
         tags: ['Python', 'Algorithms', 'Advent of Code'],
         markdown: day5Markdown,
+        prePostDialogueBoxes: [...adventOfCodeDialogueBoxes],
+    },
+    {
+        id: 'aoc-2025-day-6',
+        title: 'Advent of Code 2025 - Day 6',
+        date: createLocalDate('2026-01-04'),
+        summary: 'Helping Cephalopods with their math homework',
+        tags: ['Python', 'Algorithms', 'Advent of Code', 'numpy'],
+        markdown: day6Markdown,
         prePostDialogueBoxes: [...adventOfCodeDialogueBoxes],
     },
 ];

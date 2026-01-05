@@ -21,11 +21,17 @@ Part 1 tasks us with finding the number of paper rolls we can remove from a grid
 @.@.@@@.@.
 \`\`\`
 
-Where \`@\` are paper rolls and \`.\` are empty spaces. A roll of paper can be removed by a forklift if there are fewer than four rolls of paper in the immediately surrounding eight spots.
+Where \`@\` are paper rolls and \`.\` are empty spaces. A roll of paper can be removed by a
+forklift if there are fewer than four rolls of paper in the immediately surrounding eight spots.
 
-To start, I know I'm going to need some sort of function that counts how many rolls surround a space. I think preprocessing the input to map \`. -> 0\` and \`@ -> 1\` will help me total this conveniently.
+To start, I know I'm going to need some sort of function that counts how many rolls surround a
+space. I think preprocessing the input to map \`. -> 0\` and \`@ -> 1\` will help me total this
+conveniently.
 
-I like to solve these puzzles in a [top-down design](https://en.wikipedia.org/wiki/Bottom-up_and_top-down_approaches#Programming), referencing functions that I haven't written yet but hope to implement. The code implementation of this procedure is thus quite straightforward:
+I like to solve these puzzles in a
+[top-down design](https://en.wikipedia.org/wiki/Bottom-up_and_top-down_approaches#Programming),
+referencing functions that I haven't written yet but hope to implement. The code implementation
+of this procedure is thus quite straightforward:
 
 \`\`\`python
 lines = input.read().splitlines()
@@ -41,7 +47,11 @@ for i in range(len(grid)):
 print(total_movable_rolls)
 \`\`\`
 
-This implementation uses \`range()\` to iterate over the indices of the grid. I've been told that isn't very "[Pythonic](https://en.wikipedia.org/wiki/Python_(programming_language)#Design_philosophy_and_features)," and so I'm trying to be better about iterating over elements rather than indices. After looking into alternatives, I was able to use \`enumerate\` instead of \`range(len(...))\` to clean it up a bit:
+This implementation uses \`range()\` to iterate over the indices of the grid. I've been told that
+isn't very "[Pythonic](https://en.wikipedia.org/wiki/Python_(programming_language)#Design_philosophy_and_features),"
+and so I'm trying to be better about iterating over elements rather than indices. After looking
+into alternatives, I was able to use \`enumerate\` instead of \`range(len(...))\` to clean it up
+a bit:
 
 \`\`\`python
 for i, row in enumerate(grid):
@@ -50,7 +60,8 @@ for i, row in enumerate(grid):
             total_movable_rolls += 1
 \`\`\`
 
-Because the grid is made up of \`0\`s and \`1\`s, the imagined \`num_rolls_surrounding()\` function simply needs to sum the 8 surrounding squares and return it:
+Because the grid is made up of \`0\`s and \`1\`s, the imagined \`num_rolls_surrounding()\`
+function simply needs to sum the 8 surrounding squares and return it:
 
 \`\`\`python
 def num_rolls_surrounding(grid: list[int], row: int, col: int) -> int:
@@ -71,7 +82,8 @@ def num_rolls_surrounding(grid: list[int], row: int, col: int) -> int:
 
 The key parts of this function are:
 
-- accurately setting the boundaries so as not to go out of bounds when checking rolls of paper on the edge of the grid
+- accurately setting the boundaries so as not to go out of bounds when checking rolls of paper
+on the edge of the grid
 - ensuring we don't count the central paper-roll-to-be-removed in the number of surrounding rolls
 
 ### Success! [*]
@@ -79,7 +91,10 @@ The key parts of this function are:
 ----
 ## Part 2
 
-Part 2 asks us a more generalized question: how many paper rolls can be removed in total (even considering ones that are initially blocked, but become removable after other rolls are removed)? Because we already know how to determine if one roll can be removed, all we need to do is mark each removed roll as gone and continue trying to remove rolls until we can't any more:
+Part 2 asks us a more generalized question: how many paper rolls can be removed in total (even
+considering ones that are initially blocked, but become removable after other rolls are removed)?
+Because we already know how to determine if one roll can be removed, all we need to do is mark each
+removed roll as gone and continue trying to remove rolls until we can't any more:
 
 \`\`\`python
 total_movable_rolls = 0

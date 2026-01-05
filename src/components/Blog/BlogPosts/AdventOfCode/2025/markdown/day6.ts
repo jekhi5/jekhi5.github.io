@@ -2,7 +2,9 @@ const markdown = `## The Problem
 
 [Puzzle link](https://www.adventofcode.com/2025/day/6) 
 
-Day 6 was an exercise in input parsing. I was able to use [numpy](https://numpy.org/doc/) to make this much easier. We're given a string of math problems in stacked forms and are tasked with helping some cephalopods finish their math homework.
+Day 6 was an exercise in input parsing. I was able to use [numpy](https://numpy.org/doc/) to make
+this much easier. We're given a string of math problems in stacked forms and are tasked with
+helping some cephalopods finish their math homework.
 
 ## Part 1
 
@@ -15,7 +17,9 @@ In todays puzzle we're given a set of math problems that look like this:
 *   +   *   +  
 \`\`\`
 
-The puzzle asks us to complete all of the problems and sum the solutions. These problems are aligned such that each problem is stacked vertically with the operation on the bottom. In this example, there are four problems:
+The puzzle asks us to complete all of the problems and sum the solutions. These problems are
+aligned such that each problem is stacked vertically with the operation on the bottom. In this
+example, there are four problems:
 
 
 - \`123 * 45 * 6 = 33210\`
@@ -23,7 +27,8 @@ The puzzle asks us to complete all of the problems and sum the solutions. These 
 - \`51 * 387 * 215 = 4243455\`
 - \`64 + 23 + 314 = 401\`
 
-Since the description of what a cephalopod math problem is pretty clearly laid out, I designed a data type, \`Problem\`, that encapsulates the key concepts:
+Since the description of what a cephalopod math problem is pretty clearly laid out, I designed a
+data type, \`Problem\`, that encapsulates the key concepts:
 
 \`\`\`python
 from functools import reduce
@@ -42,7 +47,10 @@ class Problem:
         return reduce(self.op, self.nums)
 \`\`\`
 
-With a setup like this, the tricky part of the problem is more in the parsing of the actual text than in the solving of the individual problems. Going line by line, I can split on spaces and know that each resulting number (or op for the last row) corresponds to the problem in the list of problems that shares its index:
+With a setup like this, the tricky part of the problem is more in the parsing of the actual text
+than in the solving of the individual problems. Going line by line, I can split on spaces and know
+that each resulting number (or op for the last row) corresponds to the problem in the list of
+problems that shares its index:
 
 \`\`\`python
 import operator
@@ -68,9 +76,13 @@ for line in lines:
                 problems[i].add_num(int(new_num))
 \`\`\`
 
-The critical part of this parsing strategy is that there is a consistent list of \`Problem\`s in which new numbers are added as the lines are parsed. The index of each number in the row we're parsing corresponds to the index of the problem it should be added to. The same logic applies to setting each problem's operation for the last line.
+The critical part of this parsing strategy is that there is a consistent list of \`Problem\`s in
+which new numbers are added as the lines are parsed. The index of each number in the row we're
+parsing corresponds to the index of the problem it should be added to. The same logic applies to
+setting each problem's operation for the last line.
 
-Once this parsing is in place, the actual solution is the result of iterating over each problem, solving it, and summing the results:
+Once this parsing is in place, the actual solution is the result of iterating over each problem,
+solving it, and summing the results:
 
 \`\`\`python
 print(sum([problem.solve() for problem in problems]))
@@ -82,7 +94,10 @@ print(sum([problem.solve() for problem in problems]))
 ----
 ## Part 2
 
-Part two tells us that the way we originally parsed these problems was for humans. For Cephalopods, math is parsed vertically, from right to left, one column at a time. The most significant digit is at the top, the least significant on the bottom, and the problems are still separated by columns of all spaces. So the following math problems:
+Part two tells us that the way we originally parsed these problems was for humans. For Cephalopods,
+math is parsed vertically, from right to left, one column at a time. The most significant digit
+is at the top, the least significant on the bottom, and the problems are still separated by columns
+of all spaces. So the following math problems:
 
 \`\`\`
 123 328  51 64 
@@ -98,7 +113,12 @@ Now yield these human-readable problems:
 - \`8 + 248 + 369 = 625\`
 - \`356 * 24 * 1 = 8544\`
 
-I contemplated multiple different ways to parse the input by column, and I realized that numpy actually has a great way to iterate by column that I could use for this. Using numpy's \`genfromtxt()\` function, I can parse the entire string into an array, split character by character, and then use the [\`transpose\`](https://numpy.org/doc/stable/reference/generated/numpy.transpose.html) property to iterate by column:
+I contemplated multiple different ways to parse the input by column, and I realized that numpy
+actually has a great way to iterate by column that I could use for this. Using numpy's
+\`genfromtxt()\` function, I can parse the entire string into an array, split character by
+character, and then use the
+[\`transpose\`](https://numpy.org/doc/stable/reference/generated/numpy.transpose.html)
+property to iterate by column:
 
 \`\`\`python
 # delimiter=1 splits per character
@@ -124,7 +144,9 @@ for column in input_grid.T:
 problems.append(Problem(cur_problem_numbers))
 \`\`\`
 
-As we move through each column, we parse the number we see, being sure to only include valid digits (and not the potential spaces in the column). When we reach a separator column, we build a new problem with these numbers.
+As we move through each column, we parse the number we see, being sure to only include valid digits
+(and not the potential spaces in the column). When we reach a separator column, we build a new
+problem with these numbers.
 
 Next, we parse the ops in the last row similarly to part 1:
 

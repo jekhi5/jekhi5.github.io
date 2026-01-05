@@ -8,7 +8,10 @@ Day 5 is another ID verification puzzle.
 
 ## Part 1
 
-Part 1 tasks us with reading a series of valid ID ranges and then checking many individual IDs to see if they fall within any of the ranges. In my effort to be a stronger Python user (and to show that I do actually have _some_ design principles), I've decided to use a class to represent our ID ranges:
+Part 1 tasks us with reading a series of valid ID ranges and then checking many individual IDs to
+see if they fall within any of the ranges. In my effort to be a stronger Python user (and to show
+that I do actually have _some_ design principles), I've decided to use a class to represent our ID
+ranges:
 
 \`\`\`python
 class Range:
@@ -19,7 +22,10 @@ class Range:
         self.high = high
 \`\`\`
 
-The reason I've decided to use a custom class and not, say, a tuple, is that I want to add some custom functions. The puzzle specifically stipulates that some of the valid ID ranges might overlap. This is a big clue for me that I might be able to significantly optimize this puzzle by intelligently merging overlapping ranges:
+The reason I've decided to use a custom class and not, say, a tuple, is that I want to add some
+custom functions. The puzzle specifically stipulates that some of the valid ID ranges might
+overlap. This is a big clue for me that I might be able to significantly optimize this puzzle by
+intelligently merging overlapping ranges:
 
 \`\`\`python
 class Range:
@@ -41,7 +47,10 @@ class Range:
 _Note: There is a subtle bug in this code that won't surface until part 2. Can you find it?_
 
 
-To implement this range-merging behavior, we'll start by processing each pair of numbers into a range, and then determine if there are any overlaps with existing ranges (again, I'm using [top-down design](https://en.wikipedia.org/wiki/Bottom-up_and_top-down_approaches#Programming), so we'll implement \`insert_range_smart()\` after we get this logic done):
+To implement this range-merging behavior, we'll start by processing each pair of numbers into a
+range, and then determine if there are any overlaps with existing ranges (again, I'm using
+[top-down design](https://en.wikipedia.org/wiki/Bottom-up_and_top-down_approaches#Programming),
+so we'll implement \`insert_range_smart()\` after we get this logic done):
 
 \`\`\`python
 ranges = []
@@ -78,7 +87,11 @@ def insert_range_smart(ranges: list[Range], new_range: Range) -> list[Range]:
 \`\`\`
 
 
-While this merging strategy is not strictly necessary, it means we'll have fewer ranges to check each ID against, and if I know Advent of Code, this very well could mean the difference between your programming taking a few seconds to run and taking _much **much**_ longer. Once we have our ranges processed, all we need to do is look at each given ID number and check its validity in each range until we find a matching one:
+While this merging strategy is not strictly necessary, it means we'll have fewer ranges to check
+each ID against, and if I know Advent of Code, this very well could mean the difference between
+your programming taking a few seconds to run and taking _much **much**_ longer. Once we have our
+ranges processed, all we need to do is look at each given ID number and check its validity in each
+range until we find a matching one:
 
 \`\`\`python
 def is_valid(ranges: list[Range], item_num: int) -> bool:
@@ -102,7 +115,10 @@ print(num_valid)
 ----
 ## Part 2
 
-Part 2 asks us to ignore the valid ID numbers in the second half of the input and instead count the total number of valid ID numbers the ranges allow for. As a benefit of our merging strategy, this is a very simple question to answer: simply total up the differences of the \`high\` and \`low\` values from each range!
+Part 2 asks us to ignore the valid ID numbers in the second half of the input and instead count the
+total number of valid ID numbers the ranges allow for. As a benefit of our merging strategy, this
+is a very simple question to answer: simply total up the differences of the \`high\` and \`low\`
+values from each range!
 
 \`\`\`python
 # The +1 comes from the fact that the ranges are _inclusive_
@@ -110,14 +126,18 @@ Part 2 asks us to ignore the valid ID numbers in the second half of the input an
 print(sum([(range.high - range.low + 1) for range in ranges]))
 \`\`\`
 
-But when I ran this, Advent of Code said my result was too high. Hmm. This simple summation solution is only possible if I've successfully merged every range as much as possible, we'd be double counting ranges otherwise. Let's check some edge cases of my merging function to see where the problem is:
+But when I ran this, Advent of Code said my result was too high. Hmm. This simple summation
+solution is only possible if I've successfully merged every range as much as possible, we'd be
+double counting ranges otherwise. Let's check some edge cases of my merging function to see where
+the problem is:
 
 - Example: \`insert_range_smart([(10, 15)], (13, 18)) -> [(10, 18)]\` [${CHECK_MARK}]
 - Example: \`insert_range_smart([(10, 15)], (6, 12)) -> [(6, 15)]\` [${CHECK_MARK}]
 - Example: \`insert_range_smart([(10, 15)], (12, 14)) -> [(10, 15)]\` [${CHECK_MARK}]
 - Example: \`insert_range_smart([(10, 15)], (9, 17)) -> [(10, 15), (9, 17)]\` [X]
 
-It seems like the failing case is when the other range fully encapsulates this range. This reveals the bug in \`overlaps()\`: we need to check the overlap both ways.
+It seems like the failing case is when the other range fully encapsulates this range. This reveals 
+the bug in \`overlaps()\`: we need to check the overlap both ways.
 
 \`\`\`python
 def overlaps(self, other: "Range") -> bool:

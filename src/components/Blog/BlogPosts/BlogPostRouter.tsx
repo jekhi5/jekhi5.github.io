@@ -3,6 +3,7 @@ import { posts } from './index';
 import MarkdownBlogPost from '../PostComponent';
 import { formatBlogDate } from 'utils/dateFormatters';
 import RetractableText from '../RetractableText';
+import { BACKWARD_ARROW } from 'utils/unicodeMarks';
 
 export default function BlogPostRouter() {
     const { postId } = useParams<{ postId: string }>();
@@ -40,7 +41,7 @@ export default function BlogPostRouter() {
                         (e.currentTarget.style.color = '#3b82f6')
                     }
                 >
-                    ← Back to Blog
+                    {`${BACKWARD_ARROW} Back to Blog`}
                 </Link>
             </div>
             {post.prePostDialogueBoxes &&

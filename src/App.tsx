@@ -9,22 +9,28 @@ import WorkHistory from 'components/WorkHistory';
 import ContactForm from 'components/ContactForm';
 import BlogList from 'components/Blog/index';
 import BlogPostRouter from 'components/Blog/BlogPosts/BlogPostRouter';
+import ScrollToTop from 'components/ScrollToTop';
+import { ReduceMotionProvider } from 'context/SmoothScrollContext';
 
 function App() {
     return (
-        <div className="App">
-            <Header />
-            <Routes>
-                <Route path="" element={<Home />} />
-                <Route path="/projects" element={<Projects />} />
-                <Route path="/work" element={<WorkHistory />} />
-                <Route path="/contact" element={<ContactForm />} />
-                <Route path="/blog" element={<BlogList />} />
-                <Route path="/blog/:postId" element={<BlogPostRouter />} />
-                <Route path="*" element={<Home />} />
-            </Routes>
-        </div>
+        <ReduceMotionProvider>
+            <div className="App">
+                <ScrollToTop />
+                <Header />
+                <Routes>
+                    <Route path="" element={<Home />} />
+                    <Route path="/projects" element={<Projects />} />
+                    <Route path="/work" element={<WorkHistory />} />
+                    <Route path="/contact" element={<ContactForm />} />
+                    <Route path="/blog" element={<BlogList />} />
+                    <Route path="/blog/:postId" element={<BlogPostRouter />} />
+                    <Route path="*" element={<Home />} />
+                </Routes>
+            </div>
+        </ReduceMotionProvider>
     );
+    
 }
 
 export default App;

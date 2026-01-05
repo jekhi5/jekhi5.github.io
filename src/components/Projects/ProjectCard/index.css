@@ -137,3 +137,24 @@
         transition: none !important;
     }
 }
+
+/* Accessibility: When reduce motion is enabled, always show full content */
+body.reduce-motion #project-card {
+    transform: none !important;
+    width: 100% !important;
+}
+
+body.reduce-motion .truncated-description {
+    display: none !important;
+}
+
+body.reduce-motion .full-description {
+    display: block !important;
+    opacity: 1 !important;
+    max-height: none !important;
+}
+
+body.reduce-motion #project-card:hover {
+    transform: none !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

@@ -1,9 +1,11 @@
 import { NavLink } from 'react-router-dom';
 import './index.css';
 import { useRef } from 'react';
+import { useReduceMotion } from 'context/SmoothScrollContext';
 
 const Header = () => {
     const navTogglerRef = useRef<HTMLButtonElement | null>(null);
+    const { reduceMotionEnabled, toggleReduceMotion } = useReduceMotion();
 
     const closeMenu = () => {
         const toggler = navTogglerRef.current;
@@ -115,6 +117,20 @@ const Header = () => {
                             >
                                 Contact Me
                             </NavLink>
+                        </li>
+                        <li className="nav-item d-flex align-items-center">
+                            <div className="smooth-scroll-container">
+                                <span className="smooth-scroll-label">Reduce Motion</span>
+                                <label className="switch">
+                                    <input
+                                        type="checkbox"
+                                        checked={reduceMotionEnabled}
+                                        onChange={toggleReduceMotion}
+                                        aria-label="Toggle reduced motion for accessibility"
+                                    />
+                                    <span className="slider"></span>
+                                </label>
+                            </div>
                         </li>
                     </ul>
                 </div>

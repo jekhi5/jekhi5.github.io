@@ -1,40 +1,37 @@
-import { Link } from 'react-router-dom';
 import { posts } from './BlogPosts';
-import { formatBlogDate } from 'utils/dateFormatters';
 import './index.css';
+import { retractableHeaderType } from 'types';
+import RetractableText from './RetractableText';
+import { whatIsAdventOfCodeBox } from './BlogPosts/AdventOfCode';
+import PostCardComponent from './PostCardComponent';
 
 export default function BlogList() {
+    const blogExplanation = `
+I'm writing these posts explaining my solutions to [Advent of Code](https://www.adventofcode.com) puzzles to practice articulating myself technically. If you're interested, try solving the puzzle for the corresponding day yourself first, then compare your approach with my solution to see if we thought about it similarly. You can also find all my solutions for each year I've participated at [this repository](https://www.github.com/jekhi5/advent-of-code).
+
+Also, my solutions are not necessarily optimal. I use these puzzles as a way to stretch my algorithms knowledge and, more importantly, to have fun while coding -- separate from my daily life as a programmer. If you see ways I might improve any of my solutions, please feel free to email me through [the contact form](/#/contact) on this portfolio.
+
+Finally, if you're interested in another perspective, consider checking out my friend [Emery's blog](https://www.jacobowitz.org/blog.html) to explore his solutions and learn about his thought process.
+            `.trim();
     return (
         <div className="blog-list">
             <h2 className="header">Blog</h2>
-            <p style={{ marginBottom: '2rem', color: '#6b7280' }}>
-                Thoughts on coding, problem-solving, and projects I'm working
-                on.
-            </p>
+            <RetractableText
+                title={'What is this blog?'}
+                type={retractableHeaderType.NORMAL}
+                markdown={blogExplanation}
+                startOpen={true}
+            />
+
+            <RetractableText
+                title={whatIsAdventOfCodeBox.title}
+                type={whatIsAdventOfCodeBox.type}
+                markdown={whatIsAdventOfCodeBox.markdown}
+                startOpen={whatIsAdventOfCodeBox.startOpen}
+            />
 
             {posts.map((post) => (
-                <Link
-                    key={post.id}
-                    to={`/blog/${post.id}`}
-                    className="post-card"
-                >
-                    <div className="post-card-header">
-                        <h3>{post.title}</h3>
-                        <div className="post-card-meta">
-                            <time>{formatBlogDate(post.date)}</time>
-                        </div>
-                    </div>
-
-                    <p className="post-card-summary">{post.summary}</p>
-
-                    <div className="post-card-tags">
-                        {post.tags.map((tag) => (
-                            <span key={tag} className="post-card-tag">
-                                {tag}
-                            </span>
-                        ))}
-                    </div>
-                </Link>
+                <PostCardComponent post={post} />
             ))}
         </div>
     );

@@ -41,38 +41,10 @@
     text-overflow: ellipsis;
 }
 
-.truncated-description,
 .full-description {
-    overflow: hidden;
-    transition: opacity 0.4s ease, max-height 0.5s ease;
-}
-
-.truncated-description {
-    max-height: 4.5em; /* roughly 3 lines of text */
-    opacity: 1;
-}
-
-#project-card:hover .truncated-description {
-    opacity: 0;
-    max-height: 0;
-}
-
-.full-description {
-    max-height: 0;
-    opacity: 0;
-}
-
-#project-card:hover .full-description {
-    opacity: 1;
-    max-height: 20em; /* enough for your full text */
-}
-
-#project-card:hover .card-text {
-    display: none;
-}
-
-#project-card:hover .full-description {
     display: block;
+    opacity: 1;
+    max-height: none;
 }
 
 .card-img-top {
@@ -118,40 +90,12 @@
         transform: none !important;
         width: 100% !important;
     }
-
-    /* Always show full text */
-    .truncated-description {
-        display: none !important;
-    }
-
-    .full-description {
-        display: block !important;
-        opacity: 1 !important;
-        max-height: none !important;
-    }
-
-    /* Optional: Remove transitions for snappier mobile feel */
-    #project-card,
-    .truncated-description,
-    .full-description {
-        transition: none !important;
-    }
 }
 
-/* Accessibility: When reduce motion is enabled, always show full content */
+/* Accessibility: When reduce motion is enabled, disable transforms */
 body.reduce-motion #project-card {
     transform: none !important;
     width: 100% !important;
-}
-
-body.reduce-motion .truncated-description {
-    display: none !important;
-}
-
-body.reduce-motion .full-description {
-    display: block !important;
-    opacity: 1 !important;
-    max-height: none !important;
 }
 
 body.reduce-motion #project-card:hover {

@@ -33,10 +33,6 @@ const ProjectCard = ({ project }: { project: Project }) => {
                     {project.name}
                 </h5>
 
-                <p className="card-text text-secondary fs-6 mb-4 text-center truncated-description">
-                    {project.description}
-                </p>
-
                 <p className="card-text text-secondary fs-6 mb-4 text-center full-description">
                     {project.description}
                 </p>

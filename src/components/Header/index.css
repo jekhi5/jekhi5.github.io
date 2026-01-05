@@ -27,17 +27,6 @@
     white-space: nowrap;
 }
 
-/* Hide label on smaller screens */
-@media (max-width: 1200px) {
-    .smooth-scroll-label {
-        display: none;
-    }
-
-    .smooth-scroll-container {
-        padding: 0.5rem;
-    }
-}
-
 .switch {
     position: relative;
     display: inline-block;

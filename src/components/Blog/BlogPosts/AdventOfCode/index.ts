@@ -6,6 +6,7 @@ import day3Markdown from './2025/markdown/day3';
 import day4Markdown from './2025/markdown/day4';
 import day5Markdown from './2025/markdown/day5';
 import day6Markdown from './2025/markdown/day6';
+import day7Markdown from './2025/markdown/day7';
 import adventOfCodeDialogueBoxes from './dialogueBoxes';
 
 const AdventOfCode2025Posts: BlogPost[] = [
@@ -69,6 +70,15 @@ const AdventOfCode2025Posts: BlogPost[] = [
         summary: 'Helping Cephalopods with their math homework',
         tags: ['Python', 'Algorithms', 'Advent of Code', 'numpy'],
         markdown: day6Markdown,
+        prePostDialogueBoxes: [...adventOfCodeDialogueBoxes],
+    },
+    {
+        id: 'aoc-2025-day-7',
+        title: 'Advent of Code 2025 - Day 7',
+        date: createLocalDate('2026-01-05'),
+        summary: 'Some common tachyon beam splitting arithmetic',
+        tags: ['Python', 'Algorithms', 'Advent of Code', 'Dynamic Programming'],
+        markdown: day7Markdown,
         prePostDialogueBoxes: [...adventOfCodeDialogueBoxes],
     },
 ];

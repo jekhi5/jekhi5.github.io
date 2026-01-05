@@ -2,6 +2,7 @@ import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import './index.css';
+import remarkGfm from 'remark-gfm';
 
 interface BlogPostProps {
     title: string;
@@ -27,6 +28,7 @@ export default function BlogPost({
 
             <section className="post-content">
                 <ReactMarkdown
+                    remarkPlugins={[remarkGfm]}
                     components={{
                         code({ className, children, ...props }: any) {
                             const match = /language-(\w+)/.exec(

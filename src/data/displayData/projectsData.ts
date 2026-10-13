@@ -3,20 +3,6 @@ import { Project } from 'types';
 const projects: Project[] = [
     {
         id: 1,
-        name: 'Kanbas',
-        authors: ['Henry Renninger', 'Lizzie Jones', 'Jacob Kline'],
-        description:
-            'A simulation of the teaching and learning software, Canvas',
-        image: 'KanbasImage.png',
-        imageAltText: 'List of courses on the Kanbas Courses page',
-        url: 'https://kanbas-project.netlify.app/#/Kanbas',
-        tags: ['React', 'TypeScript', 'MongoDB', 'Express', 'Node'],
-        frontEndUrl: 'https://github.com/jekhi5/Kanbas',
-        backEndUrl: 'https://github.com/jekhi5/Kanbas-backend',
-    },
-
-    {
-        id: 2,
         name: 'SNAPpy',
         authors: [
             'Andrew Caplan',
@@ -34,7 +20,7 @@ const projects: Project[] = [
     },
 
     {
-        id: 3,
+        id: 2,
         name: 'North Star',
         authors: [
             'Ashley Davis',
@@ -54,7 +40,32 @@ const projects: Project[] = [
     },
 
     {
+        id: 3,
+        name: 'Camp Harmony Connect',
+        authors: ['Jacob Kline'],
+        description:
+            'A cross-platform mobile app to manage emergency communication and scheduling for Camp Harmony in California',
+        image: 'CampHarmonyConnect.png',
+        imageAltText: 'Camp Harmony Connect logo',
+        githubUrl: 'https://github.com/jekhi5/Camp-Harmony-Connect',
+        tags: ['Flutter', 'Dart', 'Firebase', 'Android', 'iOS'],
+    },
+
+    {
         id: 4,
+        name: 'Canasta Scoresheet',
+        authors: ['Jacob Kline'],
+        description:
+            'A customizable, easy to use, and elegant scoring app for the card game, Canasta',
+        image: 'CanastaScoresheetIcon.png',
+        imageAltText: 'Canasta Scoresheet logo',
+        appleUrl:
+            'https://apps.apple.com/us/app/canasta-scoresheet/id6755802120',
+        tags: ['Flutter', 'Dart', 'Apple', 'Android', 'iOS'],
+    },
+
+    {
+        id: 5,
         name: 'ViPER',
         authors: ['Emery Jacobowitz', 'Jacob Kline'],
         description:
@@ -70,30 +81,6 @@ const projects: Project[] = [
             'C Programming Language',
             'Programming Language Design',
         ],
-    },
-
-    {
-        id: 5,
-        name: 'Camp Harmony Connect',
-        authors: ['Jacob Kline'],
-        description:
-            'A cross-platform mobile app to manage emergency communication and scheduling for Camp Harmony in California',
-        image: 'CampHarmonyConnect.png',
-        imageAltText: 'Camp Harmony Connect logo',
-        githubUrl: 'https://github.com/jekhi5/Camp-Harmony-Connect',
-        tags: ['Flutter', 'Dart', 'Firebase', 'Android', 'iOS'],
-    },
-
-    {
-        id: 6,
-        name: 'Canasta Scoresheet',
-        authors: ['Jacob Kline'],
-        description:
-            'A customizable, easy to use, and elegant scoring app for the card game, Canasta',
-        image: 'CanastaScoresheetIcon.png',
-        imageAltText: 'Canasta Scoresheet logo',
-        appleUrl: 'https://apps.apple.com/us/app/canasta-scoresheet/id6755802120',
-        tags: ['Flutter', 'Dart', 'Apple', 'Android', 'iOS'],
     },
 ];
 

@@ -34,7 +34,7 @@ const certificationsData: Certification[] = [
         verificationUrl:
             'https://checkahealthlicense.mass.gov/profiles/1340000',
         issueDate: createLocalDate('2023-04-26'),
-        expiryDate: createLocalDate('2027-03-31'),
+        expiryDate: createLocalDate('2029-03-31'),
         certificationImage: 'MAStateSeal.png',
     },
     {
